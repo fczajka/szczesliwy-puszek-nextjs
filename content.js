@@ -178,3 +178,11 @@ export const gallery = [
     { name: "Pola", photos: ["...", "...", "..."] },
     { name: "William", photos: ["...", "...", "..."] },
 ];
+
+export const mobileNavbar = [
+    { text: "Psy", icon: "...", subMenu: ["Pola", "William"] },
+    { text: "Mioty", icon: "...", subMenu: ["Pola", "William"] },
+    { text: "Główna", icon: "..." },
+    { text: "Galeria", icon: "..." },
+    { text: "Kontakt", icon: "..." },
+];
