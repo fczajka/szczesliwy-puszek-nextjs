@@ -4,27 +4,8 @@ import Link from "next/Link";
 import Submenu from "./Submenu";
 
 const Navbar = () => {
-    const [isOpenDogs, setIsOpenDogs] = useState(false);
-    const [isOpenLitters, setIsOpenLitters] = useState(false);
-
-    const onMouseEnterDogs = () => {
-        window.innerWidth > 1024 && setIsOpenDogs(true);
-    };
-
-    const onMouseLeaveDogs = () => {
-        window.innerWidth > 1024 && setIsOpenDogs(false);
-    };
-
-    const onMouseEnterLitters = () => {
-        window.innerWidth > 1024 && setIsOpenLitters(true);
-    };
-
-    const onMouseLeaveLitters = () => {
-        window.innerWidth > 1024 && setIsOpenLitters(false);
-    };
-
     return (
-        <div className="w-full h-60px justify-center relative text-babyBlue-1500 shadow-md xsm:h-80px">
+        <div className="w-full h-60px relative text-babyBlue-1500 shadow-md xsm:h-80px">
             <div className="w-full h-full max-w-1920 flex my-0 mx-auto">
                 <div className="w-full text-3xl flex items-center justify-center font-titan-one xsm:text-4xl lg:basis-7/12">
                     <Link href="/">
