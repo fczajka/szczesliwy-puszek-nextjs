@@ -1,5 +1,9 @@
 import { IoMdArrowDropdown } from "react-icons/io";
 
+export const metaData = {
+    title: "Szczęśliwy Puszek",
+};
+
 export const layout = {
     header: {
         title: "Szczęśliwy Puszek",
