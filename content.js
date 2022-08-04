@@ -1,12 +1,27 @@
+import { IoMdArrowDropdown } from "react-icons/io";
+
 export const layout = {
     header: {
         title: "Szczęśliwy Puszek",
         menu: [
-            { element: "Strona główna" },
-            { element: ["Pola", "William"] },
-            { element: ["Miot a"] },
-            { element: "Galeria" },
-            { element: "Kontakt" },
+            { text: "Strona główna", array: null, linkTo: "/", icon: null },
+            {
+                text: "Psy",
+                array: [
+                    { name: "Pola", color: "royalPink" },
+                    { name: "William", color: "babyBlue" },
+                ],
+                linkTo: null,
+                icon: IoMdArrowDropdown,
+            },
+            {
+                text: "Mioty",
+                array: [{ name: "Miot a", color: "babyBlue" }],
+                linkTo: null,
+                icon: IoMdArrowDropdown,
+            },
+            { text: "Galeria", array: null, linkTo: "/gallery", icon: null },
+            { text: "Kontakt", array: null, linkTo: "/", icon: null },
         ],
     },
     contact: {

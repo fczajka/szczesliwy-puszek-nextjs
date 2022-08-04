@@ -32,6 +32,8 @@ module.exports = {
                 "10vh": "10vh",
                 "84vh": "84vh",
                 "92vh": "92vh",
+                "60px": "60px",
+                "80px": "80px",
                 "160px": "160px",
                 104: "26rem",
             },
