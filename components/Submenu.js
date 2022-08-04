@@ -44,7 +44,7 @@ const Submenu = ({ submenu }) => {
                                 : "hover:bg-babyBlue-100"
                         }
                     >
-                        <Link href={`/details/${submenuElement.name}`}>
+                        <Link href={`${submenuElement.linkTo}`}>
                             <a className="py-0.5 px-4 block">
                                 {submenuElement.name}
                             </a>

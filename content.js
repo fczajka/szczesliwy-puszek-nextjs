@@ -8,19 +8,19 @@ export const layout = {
             {
                 text: "Psy",
                 array: [
-                    { name: "Pola", color: "royalPink" },
-                    { name: "William", color: "babyBlue" },
+                    { name: "Pola", color: "royalPink", linkTo: "/Pola" },
+                    { name: "William", color: "babyBlue", linkTo: "/William" },
                 ],
-                linkTo: null,
                 icon: IoMdArrowDropdown,
             },
             {
                 text: "Mioty",
-                array: [{ name: "Miot a", color: "babyBlue" }],
-                linkTo: null,
+                array: [
+                    { name: "Miot a", color: "babyBlue", linkTo: "/Litter-a" },
+                ],
                 icon: IoMdArrowDropdown,
             },
-            { text: "Galeria", array: null, linkTo: "/gallery", icon: null },
+            { text: "Galeria", array: null, linkTo: "/Gallery", icon: null },
             { text: "Kontakt", array: null, linkTo: "/", icon: null },
         ],
     },
