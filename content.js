@@ -1,5 +1,18 @@
 import { IoMdArrowDropdown } from "react-icons/io";
 
+import gallery1 from "./images/gallery/gallery1.webp";
+import gallery2 from "./images/gallery/gallery2.webp";
+import gallery3 from "./images/gallery/gallery3.webp";
+import gallery4 from "./images/gallery/gallery4.webp";
+import gallery5 from "./images/gallery/gallery5.webp";
+import gallery6 from "./images/gallery/gallery6.webp";
+import gallery7 from "./images/gallery/gallery7.webp";
+import gallery8 from "./images/gallery/gallery8.webp";
+import gallery9 from "./images/gallery/gallery9.webp";
+import gallery10 from "./images/gallery/gallery10.webp";
+import gallery11 from "./images/gallery/gallery11.webp";
+import gallery12 from "./images/gallery/gallery12.webp";
+
 export const metaData = {
     title: "Szczęśliwy Puszek",
 };
@@ -194,8 +207,66 @@ export const litterA = {
 };
 
 export const gallery = [
-    { name: "Pola", photos: ["...", "...", "..."] },
-    { name: "William", photos: ["...", "...", "..."] },
+    {
+        side: "left",
+        columns: [
+            {
+                order: "first",
+                photos: [
+                    {
+                        src: gallery1,
+                        alt: "Mały samoyed biegnie w stronę kamery",
+                    },
+                    {
+                        src: gallery2,
+                        alt: "Mały samoyed idzie w stronę kamery",
+                    },
+                    {
+                        src: gallery3,
+                        alt: "Mały samoyed idzie w stronę kamery",
+                    },
+                ],
+            },
+            {
+                order: "second",
+                photos: [
+                    { src: gallery4, alt: "Samoyed biegnie po podwórku" },
+                    { src: gallery5, alt: "Piesek przechadza się po podwórku" },
+                    {
+                        src: gallery11,
+                        alt: "Samoyed, szczeniak, który leży na poduszce",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        side: "right",
+        columns: [
+            {
+                order: "third",
+                photos: [
+                    { src: gallery7, alt: "Mały samoyed oblizuje usta" },
+                    { src: gallery6, alt: "Samoyed biegnie po podwórku" },
+                    {
+                        src: gallery10,
+                        alt: "Samoyed, szczeniak, który leży na poduszce",
+                    },
+                ],
+            },
+            {
+                order: "fourth",
+                photos: [
+                    { src: gallery8, alt: "Mały samoyed rozgląda się" },
+                    { src: gallery9, alt: "Skupiony samoyed patrzy w dal" },
+                    {
+                        src: gallery12,
+                        alt: "Samoyed, szczeniak, który leży na poduszce",
+                    },
+                ],
+            },
+        ],
+    },
 ];
 
 export const mobileNavbar = [
