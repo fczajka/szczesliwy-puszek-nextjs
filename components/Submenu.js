@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/Link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
-const Submenu = ({ submenu }) => {
+const Submenu = ({ submenu, mobile }) => {
     const [isOpenSubmenu, setIsOpenSubmenu] = useState(false);
+    const refSubmenu = useRef();
 
     const onMouseEnterSubmenu = () => {
         window.innerWidth > 1024 && setIsOpenSubmenu(true);
@@ -13,10 +14,29 @@ const Submenu = ({ submenu }) => {
         window.innerWidth > 1024 && setIsOpenSubmenu(false);
     };
 
+    useEffect(() => {
+        const handler = (event) => {
+            if (
+                isOpenSubmenu &&
+                refSubmenu.current &&
+                !refSubmenu.current.contains(event.target)
+            ) {
+                setIsOpenSubmenu(false);
+            }
+        };
+        document.addEventListener("mousedown", handler);
+        document.addEventListener("touchstart", handler);
+        return () => {
+            document.removeEventListener("mousedown", handler);
+            document.removeEventListener("touchstart", handler);
+        };
+    }, [isOpenSubmenu]);
+
     return (
         <>
             <button
-                className="flex items-center"
+                ref={refSubmenu}
+                className={`flex items-center ${mobile ? "flex-col" : ""}`}
                 aria-haspopup="menu"
                 aria-expanded={isOpenSubmenu ? "true" : "false"}
                 onClick={() => {
@@ -31,9 +51,9 @@ const Submenu = ({ submenu }) => {
             <ul
                 onMouseEnter={onMouseEnterSubmenu}
                 onMouseLeave={onMouseLeaveSubmenu}
-                className={`absolute bg-babyBlue-0 pt-6 pb-4 z-10 rounded-md shadow-md ${
-                    isOpenSubmenu ? "block" : "hidden"
-                }`}
+                className={`absolute bg-babyBlue-0 pt-6 pb-4 z-10 rounded-md shadow-md
+                ${mobile ? "bottom-14" : ""}
+                ${isOpenSubmenu ? "block" : "hidden"}`}
             >
                 {submenu.array.map((submenuElement) => (
                     <li
@@ -45,7 +65,12 @@ const Submenu = ({ submenu }) => {
                         }
                     >
                         <Link href={`${submenuElement.linkTo}`}>
-                            <a className="py-0.5 px-4 block">
+                            <a
+                                className="py-0.5 px-4 block"
+                                onClick={() => {
+                                    setIsOpenSubmenu(!isOpenSubmenu);
+                                }}
+                            >
                                 {submenuElement.name}
                             </a>
                         </Link>

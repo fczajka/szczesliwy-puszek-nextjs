@@ -1,4 +1,7 @@
 import { IoMdArrowDropdown } from "react-icons/io";
+import { FaDog, FaPaw } from "react-icons/fa";
+import { AiFillHome, AiFillPhone } from "react-icons/ai";
+import { RiGalleryFill } from "react-icons/ri";
 
 import gallery1 from "./images/gallery/gallery1.webp";
 import gallery2 from "./images/gallery/gallery2.webp";
@@ -41,24 +44,24 @@ export const layout = {
             { text: "Kontakt", array: null, linkTo: "/", icon: null },
         ],
     },
-    contact: {
-        mail: {
-            header: "Napisz do nas!",
-            form: [
-                { label: "Imię:" },
-                { label: "E-mail:" },
-                { label: "Wiadomość:" },
-            ],
-        },
-        staticInformation: {
-            description:
-                "W razie wszelkich wątpliwości zapraszamy do kontaktu.",
-            contactInformation: [
-                { icon: "...", information: "Koninko, Wielkopolska" },
-                { icon: "...", information: "123 456 789" },
-                { icon: "...", information: "example@mail.com" },
-            ],
-        },
+};
+
+export const contact = {
+    mail: {
+        header: "Napisz do nas!",
+        form: [
+            { label: "Imię:" },
+            { label: "E-mail:" },
+            { label: "Wiadomość:" },
+        ],
+    },
+    staticInformation: {
+        description: "W razie wszelkich wątpliwości zapraszamy do kontaktu.",
+        contactInformation: [
+            { icon: "...", information: "Koninko, Wielkopolska" },
+            { icon: "...", information: "123 456 789" },
+            { icon: "...", information: "example@mail.com" },
+        ],
     },
 };
 
@@ -270,9 +273,20 @@ export const gallery = [
 ];
 
 export const mobileNavbar = [
-    { text: "Psy", icon: "...", subMenu: ["Pola", "William"] },
-    { text: "Mioty", icon: "...", subMenu: ["Pola", "William"] },
-    { text: "Główna", icon: "..." },
-    { text: "Galeria", icon: "..." },
-    { text: "Kontakt", icon: "..." },
+    {
+        text: "Psy",
+        array: [
+            { name: "Pola", color: "royalPink", linkTo: "/Pola" },
+            { name: "William", color: "babyBlue", linkTo: "/William" },
+        ],
+        icon: FaDog,
+    },
+    {
+        text: "Mioty",
+        array: [{ name: "Miot a", color: "babyBlue", linkTo: "/Litter-a" }],
+        icon: FaPaw,
+    },
+    { text: "Główna", array: null, linkTo: "/", icon: AiFillHome },
+    { text: "Galeria", array: null, linkTo: "/Gallery", icon: RiGalleryFill },
+    { text: "Kontakt", array: null, linkTo: "/", icon: AiFillPhone },
 ];

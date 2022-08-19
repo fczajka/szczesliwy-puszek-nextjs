@@ -1,0 +1,35 @@
+import { mobileNavbar } from "../content";
+import Link from "next/Link";
+import Submenu from "./Submenu";
+
+const MobileNavbar = () => {
+    return (
+        <div className="w-full absolute bottom-0 h-60px  xsm:h-80px lg:hidden">
+            <ul className="flex basis-full h-full justify-evenly items-center font-radio-canada">
+                {mobileNavbar.map((listElement) => (
+                    <li
+                        key={listElement.text}
+                        className="flex basis-1/5 justify-center"
+                    >
+                        {listElement.array ? (
+                            <Submenu submenu={listElement} mobile={true} />
+                        ) : (
+                            <Link href={listElement.linkTo}>
+                                <a className="flex flex-col items-center">
+                                    {listElement.text}
+                                    {listElement.icon ? (
+                                        <listElement.icon />
+                                    ) : (
+                                        ""
+                                    )}
+                                </a>
+                            </Link>
+                        )}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
+export default MobileNavbar;

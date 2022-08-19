@@ -15,10 +15,17 @@ const Navbar = () => {
                     {layout.header.menu.map((listElement) => (
                         <li key={listElement.text}>
                             {listElement.array ? (
-                                <Submenu submenu={listElement} />
+                                <Submenu submenu={listElement} mobile={false} />
                             ) : (
                                 <Link href={listElement.linkTo}>
-                                    <a>{listElement.text}</a>
+                                    <a>
+                                        {listElement.text}
+                                        {listElement.icon ? (
+                                            <listElement.icon />
+                                        ) : (
+                                            ""
+                                        )}
+                                    </a>
                                 </Link>
                             )}
                         </li>
