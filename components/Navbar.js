@@ -4,9 +4,9 @@ import Submenu from "./Submenu";
 
 const Navbar = () => {
     return (
-        <div className="w-full h-60px relative shadow-md xsm:h-80px">
+        <div className="w-full h-60px relative shadow-md sm:h-80px">
             <div className="w-full h-full max-w-1920 flex my-0 mx-auto">
-                <div className="w-full text-3xl flex items-center justify-center font-titan-one xsm:text-4xl lg:basis-7/12">
+                <div className="w-full text-3xl flex items-center justify-center font-titan-one sm:text-4xl lg:basis-7/12">
                     <Link href="/">
                         <a>{layout.header.title}</a>
                     </Link>

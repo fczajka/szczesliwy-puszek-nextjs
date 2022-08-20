@@ -36,6 +36,9 @@ module.exports = {
                 "80px": "80px",
                 "160px": "160px",
                 104: "26rem",
+                "screen-base": "calc(100vh - 120px)",
+                "screen-sm": "calc(100vh - 160px)",
+                "screen-lg": "calc(100vh - 80px)",
             },
             margin: {
                 "10vh": "10vh",
@@ -45,9 +48,6 @@ module.exports = {
             },
             backgroundPosition: {
                 "l-50-0": "50% 0%",
-            },
-            screens: {
-                xsm: "400px",
             },
             colors: {
                 babyBlue: {

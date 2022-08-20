@@ -4,7 +4,7 @@ import Submenu from "./Submenu";
 
 const MobileNavbar = () => {
     return (
-        <div className="w-full absolute bottom-0 h-60px  xsm:h-80px lg:hidden">
+        <div className="w-full h-60px sm:h-80px lg:hidden">
             <ul className="flex basis-full h-full justify-evenly items-center font-radio-canada">
                 {mobileNavbar.map((listElement) => (
                     <li
