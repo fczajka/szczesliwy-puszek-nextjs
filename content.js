@@ -65,65 +65,73 @@ export const contact = {
     },
 };
 
-export const index = {
+export const slider = {
     slides: [
         {
-            photo: "...",
+            bgPhoto: "bg-landing-photo-1",
+            bgPosition: "bg-center",
             headline: "Weź jednego ze sobą",
             subline: "I nie każ sobie dłużej czekać",
-            buttonText: "Sprawdź",
+            anchorText: "Sprawdź",
+            anchorColor: "babyBlue",
+            linkTo: "/",
+        },
+        {
+            bgPhoto: "bg-landing-photo-2",
+            bgPosition: "bg-l-50-30",
+            headline: "Mam na imię William",
+            subline: "Jestem reproduktorem",
+            anchorText: "Poczytaj o mnie!",
+            anchorColor: "babyBlue",
+            linkTo: "/William",
+        },
+    ],
+};
+
+export const whyUs = {
+    title: "Dlaczego my:",
+    cards: [
+        {
+            photo: "...",
+            headline: "Dużo ruchu",
+            text: "Nasze psy mają dostęp do dużego podwórka do zabaw oraz zapewniamy im codzienne długie spacery.",
+            buttonText: "Dowiedz się więcej",
         },
         {
             photo: "...",
-            headline: "Mam na imię William",
-            subline: "Jestem reproduktorem",
+            headline: "Godziny zabawy",
+            text: "Organizujemy naszym pieskom wiele socjalizujących zabaw, jak i również samodzielnie je szkolimy i bawimy.",
+            buttonText: "Dowiedz się więcej",
+        },
+        {
+            photo: "...",
+            headline: "Ważna nauka",
+            text: "Każdy nasz pies jest nauczony zachowania czystości w domu jak i zachowania na spacerach",
+            buttonText: "Dowiedz się więcej",
+        },
+        {
+            photo: "...",
+            headline: "Zdrowe jedzenie",
+            text: "Nasze psy są karmione karmą Royal Cayien oraz często otrzymują posiłki typu BARF. Do tego oczywiście wszelką potrzebną suplementację.",
+            buttonText: "Dowiedz się więcej",
+        },
+    ],
+};
+
+export const ourDogs = {
+    title: "Nasze psy:",
+    dogs: [
+        {
+            name: "Pola",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            buttonText: "Poczytaj o mnie!",
+        },
+        {
+            name: "William",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             buttonText: "Poczytaj o mnie!",
         },
     ],
-    whyUs: {
-        title: "Dlaczego my:",
-        cards: [
-            {
-                photo: "...",
-                headline: "Dużo ruchu",
-                text: "Nasze psy mają dostęp do dużego podwórka do zabaw oraz zapewniamy im codzienne długie spacery.",
-                buttonText: "Dowiedz się więcej",
-            },
-            {
-                photo: "...",
-                headline: "Godziny zabawy",
-                text: "Organizujemy naszym pieskom wiele socjalizujących zabaw, jak i również samodzielnie je szkolimy i bawimy.",
-                buttonText: "Dowiedz się więcej",
-            },
-            {
-                photo: "...",
-                headline: "Ważna nauka",
-                text: "Każdy nasz pies jest nauczony zachowania czystości w domu jak i zachowania na spacerach",
-                buttonText: "Dowiedz się więcej",
-            },
-            {
-                photo: "...",
-                headline: "Zdrowe jedzenie",
-                text: "Nasze psy są karmione karmą Royal Cayien oraz często otrzymują posiłki typu BARF. Do tego oczywiście wszelką potrzebną suplementację.",
-                buttonText: "Dowiedz się więcej",
-            },
-        ],
-    },
-    ourDogs: {
-        title: "Nasze psy:",
-        dogs: [
-            {
-                name: "Pola",
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                buttonText: "Poczytaj o mnie!",
-            },
-            {
-                name: "William",
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                buttonText: "Poczytaj o mnie!",
-            },
-        ],
-    },
 };
 
 export const Pola = {

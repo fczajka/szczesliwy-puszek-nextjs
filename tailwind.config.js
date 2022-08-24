@@ -7,6 +7,10 @@ module.exports = {
     ],
     theme: {
         extend: {
+            backgroundImage: {
+                "landing-photo-1": "url('../images/index/Basco.webp')",
+                "landing-photo-2": "url('../images/index/William.webp')",
+            },
             maxWidth: {
                 1920: "1920px",
                 "50%": "50%",
@@ -47,7 +51,7 @@ module.exports = {
                 "translate-0-5": "transform: translateX(0px,5px)",
             },
             backgroundPosition: {
-                "l-50-0": "50% 0%",
+                "l-50-30": "50% 30%",
             },
             colors: {
                 babyBlue: {
@@ -81,6 +85,10 @@ module.exports = {
             fontFamily: {
                 "titan-one": ["Titan One"],
                 "radio-canada": ["Radio Canada"],
+            },
+            translate: {
+                100: "-100%",
+                200: "-200%",
             },
         },
     },
