@@ -16,12 +16,12 @@ const MobileNavbar = () => {
                         ) : (
                             <Link href={listElement.linkTo}>
                                 <a className="flex flex-col items-center">
-                                    {listElement.text}
                                     {listElement.icon ? (
                                         <listElement.icon />
                                     ) : (
                                         ""
                                     )}
+                                    {listElement.text}
                                 </a>
                             </Link>
                         )}

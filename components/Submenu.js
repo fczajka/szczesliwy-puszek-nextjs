@@ -36,7 +36,9 @@ const Submenu = ({ submenu, mobile }) => {
         <>
             <button
                 ref={refSubmenu}
-                className={`flex items-center ${mobile ? "flex-col" : ""}`}
+                className={`flex items-center ${
+                    mobile ? " flex-col-reverse" : ""
+                }`}
                 aria-haspopup="menu"
                 aria-expanded={isOpenSubmenu ? "true" : "false"}
                 onClick={() => {
@@ -65,12 +67,7 @@ const Submenu = ({ submenu, mobile }) => {
                         }
                     >
                         <Link href={`${submenuElement.linkTo}`}>
-                            <a
-                                className="py-0.5 px-4 block"
-                                onClick={() => {
-                                    setIsOpenSubmenu(!isOpenSubmenu);
-                                }}
-                            >
+                            <a className="py-0.5 px-4 block">
                                 {submenuElement.name}
                             </a>
                         </Link>
