@@ -34,4 +34,12 @@ const Gallery = () => {
     );
 };
 
+export function getStaticProps() {
+    return {
+        props: {
+            content: gallery,
+        },
+    };
+}
+
 export default Gallery;
