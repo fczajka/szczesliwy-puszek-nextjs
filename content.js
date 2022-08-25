@@ -15,6 +15,10 @@ import gallery9 from "./images/gallery/gallery9.webp";
 import gallery10 from "./images/gallery/gallery10.webp";
 import gallery11 from "./images/gallery/gallery11.webp";
 import gallery12 from "./images/gallery/gallery12.webp";
+import food from "./images/index/food.webp";
+import fun from "./images/index/fun.webp";
+import running from "./images/index/running.webp";
+import learing from "./images/index/learning.webp";
 
 export const metaData = {
     title: "Szczęśliwy Puszek",
@@ -74,7 +78,7 @@ export const slider = {
             subline: "I nie każ sobie dłużej czekać",
             anchorText: "Sprawdź",
             anchorColor: "babyBlue",
-            linkTo: "/",
+            linkTo: "#whyUs",
         },
         {
             bgPhoto: "bg-landing-photo-2",
@@ -92,28 +96,38 @@ export const whyUs = {
     title: "Dlaczego my:",
     cards: [
         {
-            photo: "...",
-            headline: "Dużo ruchu",
-            text: "Nasze psy mają dostęp do dużego podwórka do zabaw oraz zapewniamy im codzienne długie spacery.",
-            buttonText: "Dowiedz się więcej",
+            side: "left",
+            columns: [
+                {
+                    photo: running,
+                    headline: "Dużo ruchu",
+                    text: "Nasze psy mają dostęp do dużego podwórka, na którym biegają oraz bawią się cały dzień. Zapewniamy im codzienne długie spacery.",
+                    buttonText: "Dowiedz się więcej",
+                },
+                {
+                    photo: fun,
+                    headline: "Godziny zabawy",
+                    text: "Organizujemy naszym pieskom wiele socjalizujących zabaw, jak i również samodzielnie je szkolimy i bawimy.",
+                    buttonText: "Dowiedz się więcej",
+                },
+            ],
         },
         {
-            photo: "...",
-            headline: "Godziny zabawy",
-            text: "Organizujemy naszym pieskom wiele socjalizujących zabaw, jak i również samodzielnie je szkolimy i bawimy.",
-            buttonText: "Dowiedz się więcej",
-        },
-        {
-            photo: "...",
-            headline: "Ważna nauka",
-            text: "Każdy nasz pies jest nauczony zachowania czystości w domu jak i zachowania na spacerach",
-            buttonText: "Dowiedz się więcej",
-        },
-        {
-            photo: "...",
-            headline: "Zdrowe jedzenie",
-            text: "Nasze psy są karmione karmą Royal Cayien oraz często otrzymują posiłki typu BARF. Do tego oczywiście wszelką potrzebną suplementację.",
-            buttonText: "Dowiedz się więcej",
+            side: "right",
+            columns: [
+                {
+                    photo: learing,
+                    headline: "Ważna nauka",
+                    text: "Każdy nasz pies jest nauczony zachowania czystości w domu jak i zachowania na spacerach",
+                    buttonText: "Dowiedz się więcej",
+                },
+                {
+                    photo: food,
+                    headline: "Zdrowe jedzenie",
+                    text: "Psy spożywają karmę Royal Cayien oraz otrzymują posiłki typu BARF, a ich dieta wzbogacona jest odpowiednią suplementacją.",
+                    buttonText: "Dowiedz się więcej",
+                },
+            ],
         },
     ],
 };

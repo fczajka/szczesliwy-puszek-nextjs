@@ -2,7 +2,7 @@ const Button = ({ type, text, color, link }) => {
     return (
         <div
             className={`rounded-md ${
-                color === "babyBlue" ? "text-babyBlue-0" : "text-royalPink-0"
+                color === "babyBlue" ? "text-babyBlue-0" : "text-royalPink-50"
             } ${
                 color === "babyBlue" ? "bg-babyBlue-400" : "bg-royalPink-400"
             } ${
