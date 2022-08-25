@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 
 const Submenu = ({ submenu, mobile }) => {
     const [isOpenSubmenu, setIsOpenSubmenu] = useState(false);
+    const refButton = useRef();
     const refSubmenu = useRef();
 
     const onMouseEnterSubmenu = () => {
@@ -19,6 +20,7 @@ const Submenu = ({ submenu, mobile }) => {
             if (
                 isOpenSubmenu &&
                 refSubmenu.current &&
+                !refButton.current.contains(event.target) &&
                 !refSubmenu.current.contains(event.target)
             ) {
                 setIsOpenSubmenu(false);
@@ -35,7 +37,7 @@ const Submenu = ({ submenu, mobile }) => {
     return (
         <>
             <button
-                ref={refSubmenu}
+                ref={refButton}
                 className={`flex items-center ${
                     mobile ? " flex-col-reverse" : ""
                 }`}
@@ -51,10 +53,11 @@ const Submenu = ({ submenu, mobile }) => {
                 {submenu.icon ? <submenu.icon /> : ""}
             </button>
             <ul
+                ref={refSubmenu}
                 onMouseEnter={onMouseEnterSubmenu}
                 onMouseLeave={onMouseLeaveSubmenu}
-                className={`absolute bg-babyBlue-0 pt-6 pb-4 z-10 rounded-md shadow-md
-                ${mobile ? "bottom-14" : ""}
+                className={`absolute bg-babyBlue-0 pt-4 pb-4 z-10 rounded-md shadow-md
+                ${mobile ? "bottom-16" : ""}
                 ${isOpenSubmenu ? "block" : "hidden"}`}
             >
                 {submenu.array.map((submenuElement) => (
@@ -67,7 +70,12 @@ const Submenu = ({ submenu, mobile }) => {
                         }
                     >
                         <Link href={`${submenuElement.linkTo}`}>
-                            <a className="py-0.5 px-4 block">
+                            <a
+                                className="py-0.5 px-4 block"
+                                onClick={() => {
+                                    setIsOpenSubmenu(!isOpenSubmenu);
+                                }}
+                            >
                                 {submenuElement.name}
                             </a>
                         </Link>
