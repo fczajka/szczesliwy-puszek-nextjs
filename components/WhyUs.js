@@ -9,9 +9,13 @@ const WhyUs = () => {
             </h2>
             <div className="w-full flex items-center flex-col xl:flex-row xl:justify-evenly">
                 {whyUs.cards.map((column) => (
-                    <div className="lg:w-full lg:flex lg:flex-row lg:justify-around">
+                    <div
+                        key={column.side}
+                        className="lg:w-full lg:flex lg:flex-row lg:justify-around"
+                    >
                         {column.columns.map((card) => (
                             <WhyUsCards
+                                key={card.headline}
                                 photo={card.photo}
                                 headline={card.headline}
                                 text={card.text}
