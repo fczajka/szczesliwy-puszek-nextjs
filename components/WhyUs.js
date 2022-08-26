@@ -1,5 +1,5 @@
 import WhyUsCards from "./WhyUsCards";
-import { whyUs } from "../content";
+import { whyUs } from "../public/content";
 
 const WhyUs = () => {
     return (

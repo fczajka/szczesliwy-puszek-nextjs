@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Slide from "../components/Slide";
 import WhyUs from "../components/WhyUs";
-import { slider } from "../content";
+import { slider } from "../public/content";
 
 const Home = ({ content }) => {
     const [index, setIndex] = useState(0);

@@ -1,4 +1,4 @@
-import { layout } from "../content";
+import { layout } from "../public/content";
 import Link from "next/Link";
 import Submenu from "./Submenu";
 

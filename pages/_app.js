@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import Layout from "../components/Layout";
-import { metaData } from "../content";
+import { metaData } from "../public/content";
 
 function MyApp({ Component, pageProps }) {
     return (

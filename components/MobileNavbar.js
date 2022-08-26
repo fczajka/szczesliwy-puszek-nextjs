@@ -1,4 +1,4 @@
-import { mobileNavbar } from "../content";
+import { mobileNavbar } from "../public/content";
 import Link from "next/Link";
 import Submenu from "./Submenu";
 

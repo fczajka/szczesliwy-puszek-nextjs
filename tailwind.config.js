@@ -8,9 +8,9 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                "landing-photo-1": "url('../images/index/Basco.webp')",
-                "landing-photo-2": "url('../images/index/William.webp')",
-                "why-us": "url('../images/index/background-pink.webp')",
+                "landing-photo-1": "url('../public/images/index/Basco.webp')",
+                "landing-photo-2": "url('../public/images/index/William.webp')",
+                "why-us": "url('../public/images/index/background-pink.webp')",
             },
             maxWidth: {
                 1920: "1920px",

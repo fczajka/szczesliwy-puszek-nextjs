@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Button from "./Button";
-import photo from "../images/index/Basco.webp";
 
 const WhyUs = ({ photo, headline, text, buttonText }) => {
     return (

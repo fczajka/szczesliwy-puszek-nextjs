@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { gallery } from "../content";
+import { gallery } from "../public/content";
 
 const Gallery = () => {
     return (
