@@ -72,8 +72,8 @@ export const contact = {
 export const slider = {
     slides: [
         {
-            bgPhoto: "bg-landing-photo-1",
-            bgPosition: "bg-center",
+            bgPhoto: "/images/index/Basco.webp",
+            bgPosition: "center",
             headline: "Weź jednego ze sobą",
             subline: "I nie każ sobie dłużej czekać",
             anchorText: "Sprawdź",
@@ -81,8 +81,8 @@ export const slider = {
             linkTo: "#whyUs",
         },
         {
-            bgPhoto: "bg-landing-photo-2",
-            bgPosition: "bg-l-50-30",
+            bgPhoto: "/images/index/William.webp",
+            bgPosition: "50% 30%",
             headline: "Mam na imię William",
             subline: "Jestem reproduktorem",
             anchorText: "Poczytaj o mnie!",

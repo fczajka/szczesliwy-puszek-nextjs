@@ -8,8 +8,6 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                "landing-photo-1": "url('../public/images/index/Basco.webp')",
-                "landing-photo-2": "url('../public/images/index/William.webp')",
                 "why-us": "url('../public/images/index/background-pink.webp')",
             },
             maxWidth: {
