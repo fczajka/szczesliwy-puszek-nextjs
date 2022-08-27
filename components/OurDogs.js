@@ -6,7 +6,7 @@ import { ourDogs } from "../public/content";
 
 const OurDogs = () => {
     return (
-        <div className="w-full flex flex-col items-center pb-10 bg-dogs bg-center bg-no-repeat md:px-20 2xl:px-28">
+        <div className="w-full flex flex-col items-center pb-10 bg-dogs bg-top bg-no-repeat px-2 md:px-32 lg:px-0 lg:bg-center xl:px-2 2xl:px-28">
             <h2 className="my-16 font-titan-one text-babyBlue-1500 text-3xl sm:text-4xl">
                 {ourDogs.title}
             </h2>
