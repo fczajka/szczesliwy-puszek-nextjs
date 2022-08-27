@@ -4,7 +4,7 @@ import Button from "./Button";
 const PhotoAndText = ({ headline, image, text, buttonInfo }) => {
     return (
         <div className="w-full flex flex-col my-4 lg:w-9/12 lg:odd:flex-row-reverse lg:even:flex-row">
-            <div className="relative w-full h-72 lg:w-1/2 lg:m-4 md:h-96 lg:h-104">
+            <div className="relative w-full h-72 lg:w-1/2 lg:m-4 md:h-96 xl:h-104">
                 <Image src={image} layout="fill" objectFit="cover" />
             </div>
             <div className="w-full flex flex-col items-start lg:w-1/2 lg:m-4">

@@ -19,8 +19,13 @@ import food from "./images/index/food.webp";
 import fun from "./images/index/fun.webp";
 import running from "./images/index/running.webp";
 import learing from "./images/index/learning.webp";
-import polaPhoto from "./images/index/Pola.webp";
-import williamPhoto from "./images/index/William.webp";
+import PolaPhoto from "./images/index/Pola.webp";
+import BaluPhoto from "./images/index/Balu.webp";
+import WilliamPhoto from "./images/index/William.webp";
+import Betsy from "./images/litter-a/Betsy.webp";
+import Boni from "./images/litter-a/Boni.webp";
+import Baki from "./images/litter-a/Baki.webp";
+import BascoSmall from "./images/litter-a/Basco-small.webp";
 
 export const metaData = {
     title: "Szczęśliwy Puszek",
@@ -42,7 +47,7 @@ export const layout = {
             {
                 text: "Mioty",
                 array: [
-                    { name: "Miot a", color: "babyBlue", linkTo: "/Litter-a" },
+                    { name: "Miot a", color: "babyBlue", linkTo: "/LitterA" },
                 ],
                 icon: IoMdArrowDropdown,
             },
@@ -74,7 +79,7 @@ export const contact = {
 export const slider = {
     slides: [
         {
-            bgPhoto: "/images/index/Basco.webp",
+            bgPhoto: "/images/index/Basco-big.webp",
             bgPosition: "center",
             headline: "Weź jednego ze sobą",
             subline: "I nie każ sobie dłużej czekać",
@@ -139,7 +144,7 @@ export const ourDogs = {
     dogs: [
         {
             headline: "Pola",
-            image: polaPhoto,
+            image: PolaPhoto,
             text: "Suczka o bardzo pogodniej naturze, niezwykle cierpliwa i spokojna w kontakcie z ludźmi. Wysoce opiekuńcza w stosunku do swoich dzieci, naturalna przewodniczka. Nigdy nie przejawiała tendencji niszczycielskich, świetnie znosi podróże krótkie i długie.",
             buttonInfo: {
                 type: "anchor",
@@ -150,7 +155,7 @@ export const ourDogs = {
         },
         {
             headline: "William",
-            image: williamPhoto,
+            image: WilliamPhoto,
             text: "Dumny samiec, od urodzenie posiada bardzo dostojny chód. Bardzo aktywny i przyjacielski, jest gotów do ciągłego ruchu. Przepiękna głowa o idealnych proporcjach otoczona bujną grzywą. Zgrabnej atletycznej postury. Naturalny model.",
             buttonInfo: {
                 type: "anchor",
@@ -209,37 +214,37 @@ export const William = {
 export const litterA = {
     dogs: [
         {
-            name: "Bettsy",
+            name: "Betsy",
+            image: Betsy,
             description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            photo: "...",
+                "Śliczna dobrze zbudowana dziewczynka o niezależnym spokojnym charakterze. Przyjaźnie nastawiona do innych ludzi jak i zwierząt. Jest suczką bardzo ciekawą świata, chętnie sprawdza nowe tereny. Posiada śnieżnobiałe gęste futerko.",
         },
         {
             name: "Boni",
+            image: Boni,
             description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            photo: "...",
+                "Urodziwa suczka o pięknych proporcjach. Posiada bardzo gęste puchate futerko. Spokojna i stonowana ale bardzo przyjacielska. Wykazuje niezwykłą chęć kontaktu z człowiekiem. Gotowa do ciągłej zabawy i eksploracji terenu.",
         },
         {
             name: "Baki",
+            image: Baki,
             description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            photo: "...",
+                "Pięknie zbudowany samiec o bujnym białym futrze. Naturalny lider stada, wykazuje dużo samodzielności, bardzo chętny do bliskiego kontaktu z człowiekiem. Przyjacielski i pogodny. Urodzony Alfa.",
         },
         {
             name: "Basco",
+            image: BascoSmall,
             description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            photo: "...",
+                "Przystojny chłopiec, bardzo dobrze zbudowany o pięknym puchatym futerku. Wykazuje zdecydowane cechy samca, chętny do zabawy oraz kontaktu z ludźmi. Zawsze gotów na przechadzkę. Urodzony kompan do przygody.",
         },
     ],
     parents: {
         headline: "Rodzice",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "Idealny dobór partnerów. Przepiękna suczka o idealnych proporcjach, śliczna głowa otoczona bujną grzywą oraz wspaniały puchaty ogon. Z natury bardzo spokojna i podatna na trening. Balu, mocno zbudowany samiec o perfekcyjnej głowie otoczonej lwią grzywą. Jego futro jest niezwykle gęste i długie. Syn wysoce utytuwanego Falcona. Oba pieski nigdy nie przejawiały tendencji niszczycielskich.",
         dogs: [
-            { name: "Pola", photo: "..." },
-            { name: "Bourbon", photo: "..." },
+            { name: "Pola", photo: PolaPhoto, alt: "Samoyed o imieniu Pola" },
+            { name: "Balu", photo: BaluPhoto, alt: "Samoyed o imieniu Balu" },
         ],
     },
     buttonText: "Strona główna",
@@ -319,7 +324,7 @@ export const mobileNavbar = [
     },
     {
         text: "Mioty",
-        array: [{ name: "Miot a", color: "babyBlue", linkTo: "/Litter-a" }],
+        array: [{ name: "Miot a", color: "babyBlue", linkTo: "/LitterA" }],
         icon: FaPaw,
     },
     { text: "Główna", array: null, linkTo: "/", icon: AiFillHome },

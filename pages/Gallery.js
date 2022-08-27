@@ -3,7 +3,7 @@ import { gallery } from "../public/content";
 
 const Gallery = () => {
     return (
-        <div className="w-full flex justify-center flex-col mt-24">
+        <div className="w-full flex justify-center flex-col mt-4">
             <div className="flex flex-col lg:flex-row">
                 {gallery.map((sides) => (
                     <div
