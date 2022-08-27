@@ -19,7 +19,7 @@ import food from "./images/index/food.webp";
 import fun from "./images/index/fun.webp";
 import running from "./images/index/running.webp";
 import learing from "./images/index/learning.webp";
-import polaPhoto from "./images/index/William.webp";
+import polaPhoto from "./images/index/Pola.webp";
 import williamPhoto from "./images/index/William.webp";
 
 export const metaData = {
