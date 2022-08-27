@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Button from "./Button";
 
-const PhotoAndText = ({ headline, image, text, buttonInfo }) => {
+const PhotoAndText = ({ headline, image, alt, text, buttonInfo }) => {
     return (
         <div className="w-full flex flex-col my-4 lg:w-9/12 lg:odd:flex-row-reverse lg:even:flex-row">
             <div className="relative w-full h-72 lg:w-1/2 lg:m-4 md:h-96 xl:h-104">
-                <Image src={image} layout="fill" objectFit="cover" />
+                <Image src={image} alt={alt} layout="fill" objectFit="cover" />
             </div>
             <div className="w-full flex flex-col items-start lg:w-1/2 lg:m-4">
                 <h3 className="font-titan-one mt-4 text-2xl sm:text-3xl lg:mt-0">

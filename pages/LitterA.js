@@ -10,6 +10,7 @@ const LitterA = () => {
                     key={dog.name}
                     headline={dog.name}
                     image={dog.image}
+                    alt={dog.alt}
                     text={dog.description}
                 />
             ))}

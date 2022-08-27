@@ -30,6 +30,7 @@ const Home = ({ content }) => {
                 <ul className="absolute w-full flex justify-center bottom-20 z-10">
                     <li className="mx-6 rounded-full text-babyBlue-100 bg-babyBlue-1500 transition duration-300 ease-in-out hover:bg-babyBlue-200 hover:text-babyBlue-1500">
                         <button
+                            aria-label="Wstecz"
                             className="p-3 rounded-full"
                             onClick={() => setIndex(index - 1)}
                         >
@@ -38,6 +39,7 @@ const Home = ({ content }) => {
                     </li>
                     <li className="mx-6 rounded-full text-babyBlue-100 bg-babyBlue-1500 transition duration-300 ease-in-out hover:bg-babyBlue-200 hover:text-babyBlue-1500">
                         <button
+                            aria-label="Naprzód"
                             className="p-3 rounded-full"
                             onClick={() => setIndex(index + 1)}
                         >

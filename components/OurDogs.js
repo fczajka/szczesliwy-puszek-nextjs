@@ -12,6 +12,7 @@ const OurDogs = () => {
                     key={dog.headline}
                     headline={dog.headline}
                     image={dog.image}
+                    alt={dog.alt}
                     text={dog.text}
                     buttonInfo={dog.buttonInfo}
                 />

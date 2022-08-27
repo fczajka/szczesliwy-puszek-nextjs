@@ -145,6 +145,7 @@ export const ourDogs = {
         {
             headline: "Pola",
             image: PolaPhoto,
+            alt: "Samoyed Pola uśmiecha się w stronę kamery",
             text: "Suczka o bardzo pogodniej naturze, niezwykle cierpliwa i spokojna w kontakcie z ludźmi. Wysoce opiekuńcza w stosunku do swoich dzieci, naturalna przewodniczka. Nigdy nie przejawiała tendencji niszczycielskich, świetnie znosi podróże krótkie i długie.",
             buttonInfo: {
                 type: "anchor",
@@ -156,6 +157,7 @@ export const ourDogs = {
         {
             headline: "William",
             image: WilliamPhoto,
+            alt: "Samoyed William dumnie stoi, patrzy w lewą stronę",
             text: "Dumny samiec, od urodzenie posiada bardzo dostojny chód. Bardzo aktywny i przyjacielski, jest gotów do ciągłego ruchu. Przepiękna głowa o idealnych proporcjach otoczona bujną grzywą. Zgrabnej atletycznej postury. Naturalny model.",
             buttonInfo: {
                 type: "anchor",
@@ -218,24 +220,28 @@ export const litterA = {
             image: Betsy,
             description:
                 "Śliczna dobrze zbudowana dziewczynka o niezależnym spokojnym charakterze. Przyjaźnie nastawiona do innych ludzi jak i zwierząt. Jest suczką bardzo ciekawą świata, chętnie sprawdza nowe tereny. Posiada śnieżnobiałe gęste futerko.",
+            alt: "Szczeniak Samoyed o imieniu Betsy",
         },
         {
             name: "Boni",
             image: Boni,
             description:
                 "Urodziwa suczka o pięknych proporcjach. Posiada bardzo gęste puchate futerko. Spokojna i stonowana ale bardzo przyjacielska. Wykazuje niezwykłą chęć kontaktu z człowiekiem. Gotowa do ciągłej zabawy i eksploracji terenu.",
+            alt: "Szczeniak Samoyed o imieniu Boni",
         },
         {
             name: "Baki",
             image: Baki,
             description:
                 "Pięknie zbudowany samiec o bujnym białym futrze. Naturalny lider stada, wykazuje dużo samodzielności, bardzo chętny do bliskiego kontaktu z człowiekiem. Przyjacielski i pogodny. Urodzony Alfa.",
+            alt: "Szczeniak Samoyed o imieniu Baki",
         },
         {
             name: "Basco",
             image: BascoSmall,
             description:
                 "Przystojny chłopiec, bardzo dobrze zbudowany o pięknym puchatym futerku. Wykazuje zdecydowane cechy samca, chętny do zabawy oraz kontaktu z ludźmi. Zawsze gotów na przechadzkę. Urodzony kompan do przygody.",
+            alt: "Szczeniak Samoyed o imieniu Basco",
         },
     ],
     parents: {
@@ -267,7 +273,7 @@ export const gallery = [
                     },
                     {
                         src: gallery3,
-                        alt: "Mały samoyed idzie w stronę kamery",
+                        alt: "Mały samoyed skrada się w stronę kamery",
                     },
                 ],
             },
