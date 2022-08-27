@@ -19,6 +19,8 @@ import food from "./images/index/food.webp";
 import fun from "./images/index/fun.webp";
 import running from "./images/index/running.webp";
 import learing from "./images/index/learning.webp";
+import polaPhoto from "./images/index/William.webp";
+import williamPhoto from "./images/index/William.webp";
 
 export const metaData = {
     title: "Szczęśliwy Puszek",
@@ -133,17 +135,29 @@ export const whyUs = {
 };
 
 export const ourDogs = {
-    title: "Nasze psy:",
+    title: "Psy:",
     dogs: [
         {
-            name: "Pola",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-            buttonText: "Poczytaj o mnie!",
+            headline: "Pola",
+            image: polaPhoto,
+            text: "Suczka o bardzo pogodniej naturze, niezwykle cierpliwa i spokojna w kontakcie z ludźmi. Wysoce opiekuńcza w stosunku do swoich dzieci, naturalna przewodniczka. Nigdy nie przejawiała tendencji niszczycielskich, świetnie znosi podróże krótkie i długie.",
+            buttonInfo: {
+                type: "anchor",
+                text: "Poczytaj o mnie!",
+                color: "royalPink",
+                link: "/Pola",
+            },
         },
         {
-            name: "William",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-            buttonText: "Poczytaj o mnie!",
+            headline: "William",
+            image: williamPhoto,
+            text: "Dumny samiec, od urodzenie posiada bardzo dostojny chód. Bardzo aktywny i przyjacielski, jest gotów do ciągłego ruchu. Przepiękna głowa o idealnych proporcjach otoczona bujną grzywą. Zgrabnej atletycznej postury. Naturalny model.",
+            buttonInfo: {
+                type: "anchor",
+                text: "Poczytaj o mnie!",
+                color: "babyBlue",
+                link: "/William",
+            },
         },
     ],
 };

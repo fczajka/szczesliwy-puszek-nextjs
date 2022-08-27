@@ -1,7 +1,7 @@
 const Button = ({ type, text, color, link }) => {
     return (
         <div
-            className={`rounded-md ${
+            className={`rounded-md font-radio-canada ${
                 color === "babyBlue" ? "text-babyBlue-0" : "text-royalPink-50"
             } ${
                 color === "babyBlue" ? "bg-babyBlue-400" : "bg-royalPink-400"
