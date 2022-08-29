@@ -1,5 +1,5 @@
 import { layout } from "../public/content";
-import Link from "next/Link";
+import Link from "next/link";
 import Submenu from "./Submenu";
 
 const Navbar = () => {
