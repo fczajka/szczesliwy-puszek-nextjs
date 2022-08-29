@@ -1,3 +1,5 @@
+import Link from "next/Link";
+
 const Button = ({ type, text, color, link }) => {
     return (
         <div
@@ -16,12 +18,11 @@ const Button = ({ type, text, color, link }) => {
                     {text}
                 </button>
             ) : (
-                <a
-                    href={link}
-                    className="block px-3 py-2 text-sm font-bold tracking-wider"
-                >
-                    {text}
-                </a>
+                <Link href={link}>
+                    <a className="block px-3 py-2 text-sm font-bold tracking-wider">
+                        {text}
+                    </a>
+                </Link>
             )}
         </div>
     );
