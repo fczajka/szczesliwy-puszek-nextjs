@@ -68,6 +68,7 @@ module.exports = {
                     1500: "#253640",
                 },
                 royalPink: {
+                    0: "#fffefe",
                     50: "#fcf2f4",
                     100: "#fce8eb",
                     200: "#facdd3",
