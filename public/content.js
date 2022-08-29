@@ -258,6 +258,12 @@ export const litterA = {
             { name: "Balu", photo: BaluPhoto, alt: "Samoyed o imieniu Balu" },
         ],
     },
+    buttonInfo: {
+        type: "anchor",
+        text: "Strona główna",
+        color: "royalPink",
+        link: "/",
+    },
     buttonText: "Strona główna",
     backgroundInfo: {
         image: "/images/index/background-blue.webp",

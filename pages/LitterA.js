@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PhotoAndText from "../components/PhotoAndText";
 import PhotoAndTextWrapper from "../components/PhotoAndTextWrapper";
+import Button from "../components/Button";
 import { litterA as litter } from "../public/content";
 
 const LitterA = () => {
@@ -43,6 +44,12 @@ const LitterA = () => {
                     ))}
                 </div>
             </div>
+            <Button
+                type={litter.buttonInfo.type}
+                text={litter.buttonInfo.text}
+                color={litter.buttonInfo.color}
+                link={litter.buttonInfo.link}
+            />
         </PhotoAndTextWrapper>
     );
 };
