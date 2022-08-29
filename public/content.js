@@ -168,9 +168,9 @@ export const ourDogs = {
         },
     ],
     backgroundInfo: {
-        image: "bg-dogs",
-        positionMobile: "bg-top",
-        positionDesktop: "lg:bg-center",
+        image: "/images/index/background-blue.webp",
+        positionMobile: "top;",
+        positionDesktop: "center;",
     },
 };
 
@@ -260,9 +260,9 @@ export const litterA = {
     },
     buttonText: "Strona główna",
     backgroundInfo: {
-        image: "bg-dogs",
-        positionMobile: "bg-top",
-        positionDesktop: "lg:bg-center",
+        image: "/images/index/background-blue.webp",
+        positionMobile: "top;",
+        positionDesktop: "center;",
     },
 };
 

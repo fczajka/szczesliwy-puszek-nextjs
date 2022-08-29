@@ -9,7 +9,6 @@ module.exports = {
         extend: {
             backgroundImage: {
                 "why-us": "url('../public/images/index/background-pink.webp')",
-                dogs: "url('../public/images/index/background-blue.webp')",
             },
             maxWidth: {
                 1920: "1920px",
