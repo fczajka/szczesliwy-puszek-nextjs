@@ -167,6 +167,11 @@ export const ourDogs = {
             },
         },
     ],
+    backgroundInfo: {
+        image: "bg-dogs",
+        positionMobile: "bg-top",
+        positionDesktop: "lg:bg-center",
+    },
 };
 
 export const Pola = {
@@ -254,6 +259,11 @@ export const litterA = {
         ],
     },
     buttonText: "Strona główna",
+    backgroundInfo: {
+        image: "bg-dogs",
+        positionMobile: "bg-top",
+        positionDesktop: "lg:bg-center",
+    },
 };
 
 export const gallery = [

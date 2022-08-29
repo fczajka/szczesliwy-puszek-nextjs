@@ -1,9 +1,10 @@
 import PhotoAndText from "./PhotoAndText";
+import PhotoAndTextWrapper from "./PhotoAndTextWrapper";
 import { ourDogs } from "../public/content";
 
 const OurDogs = () => {
     return (
-        <div className="w-full flex flex-col items-center pb-10 bg-dogs bg-top bg-no-repeat px-2 sm:px-32 lg:px-0 lg:bg-center xl:px-2 2xl:px-28">
+        <PhotoAndTextWrapper bgInfo={ourDogs.backgroundInfo}>
             <h2 className="my-16 font-titan-one text-babyBlue-1500 text-3xl sm:text-4xl">
                 {ourDogs.title}
             </h2>
@@ -17,7 +18,7 @@ const OurDogs = () => {
                     buttonInfo={dog.buttonInfo}
                 />
             ))}
-        </div>
+        </PhotoAndTextWrapper>
     );
 };
 

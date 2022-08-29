@@ -1,10 +1,11 @@
 import Image from "next/image";
 import PhotoAndText from "../components/PhotoAndText";
+import PhotoAndTextWrapper from "../components/PhotoAndTextWrapper";
 import { litterA as litter } from "../public/content";
 
 const LitterA = () => {
     return (
-        <div className="w-full flex flex-col items-center pb-10 bg-dogs bg-top bg-no-repeat px-2 sm:px-32 lg:px-0 lg:bg-center xl:px-2 2xl:px-28">
+        <PhotoAndTextWrapper bgInfo={litter.backgroundInfo}>
             {litter.dogs.map((dog) => (
                 <PhotoAndText
                     key={dog.name}
@@ -42,7 +43,7 @@ const LitterA = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </PhotoAndTextWrapper>
     );
 };
 
