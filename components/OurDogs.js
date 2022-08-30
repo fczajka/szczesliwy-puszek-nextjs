@@ -11,7 +11,7 @@ const OurDogs = () => {
             {ourDogs.dogs.map((dog) => (
                 <PhotoAndText
                     key={dog.headline}
-                    headline={dog.headline}
+                    headline={dog.name}
                     image={dog.image}
                     alt={dog.alt}
                     text={dog.text}

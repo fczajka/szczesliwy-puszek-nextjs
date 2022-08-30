@@ -29,7 +29,7 @@ const WhyUs = ({ photo, headline, text, buttonText }) => {
                     type="anchor"
                     text={buttonText}
                     color="royalPink"
-                    link="/"
+                    link="/WhyUs"
                 />
             </div>
         </div>

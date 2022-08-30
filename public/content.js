@@ -143,7 +143,7 @@ export const ourDogs = {
     title: "Psy:",
     dogs: [
         {
-            headline: "Pola",
+            name: "Pola",
             image: PolaPhoto,
             alt: "Samoyed Pola uśmiecha się w stronę kamery",
             text: "Suczka o bardzo pogodniej naturze, niezwykle cierpliwa i spokojna w kontakcie z ludźmi. Wysoce opiekuńcza w stosunku do swoich dzieci, naturalna przewodniczka. Nigdy nie przejawiała tendencji niszczycielskich, świetnie znosi podróże krótkie i długie.",
@@ -155,7 +155,7 @@ export const ourDogs = {
             },
         },
         {
-            headline: "William",
+            name: "William",
             image: WilliamPhoto,
             alt: "Samoyed William dumnie stoi, patrzy w lewą stronę",
             text: "Dumny samiec, od urodzenie posiada bardzo dostojny chód. Bardzo aktywny i przyjacielski, jest gotów do ciągłego ruchu. Przepiękna głowa o idealnych proporcjach otoczona bujną grzywą. Zgrabnej atletycznej postury. Naturalny model.",
@@ -353,3 +353,38 @@ export const mobileNavbar = [
     { text: "Galeria", array: null, linkTo: "/Gallery", icon: RiGalleryFill },
     { text: "Kontakt", array: null, linkTo: "/", icon: AiFillPhone },
 ];
+
+export const whyUsDetails = {
+    sections: [
+        {
+            headline: "Dużo ruchu",
+            image: running,
+            alt: "Szczeniak Samoyed o imieniu Betsy",
+            text: "Każdy nasz pies ma dostęp do dużego podwórka (4000m2) gdzie bawią się ze sobą lub innymi za znajomymi psami. Codziennie zapewniamy im długi spacer i odpowiednią dawkę zabaw i szkoleń.",
+        },
+        {
+            headline: "Nauka",
+            image: learing,
+            alt: "Szczeniak Samoyed o imieniu Betsy",
+            text: "Nasze samojedy są nauczone wszystkich zasad poprawnego zachowania w domu, szczególnie w kwestii niszczycielstwa oraz czystości. Dbamy o ich socjalizację i poprawne zachowanie względem innych zwierząt.",
+        },
+        {
+            headline: "Dużo zabawy",
+            image: fun,
+            alt: "Szczeniak Samoyed o imieniu Betsy",
+            text: "Organizujemy naszym pieskom wiele socjalizujących zabaw, jak i również samodzielnie je szkolimy i bawimy.",
+        },
+        {
+            headline: "Dobre jedzenie",
+            image: food,
+            alt: "Szczeniak Samoyed o imieniu Betsy",
+            text: "W naszej hodowli psy są karmione, karmą suchą marki Royal Canin oraz często dodatkowymi posiłkami typu BARF. Do przez cały okres dojrzewania otrzymywały odpowiednie witaminy i suplementy na zdrowe stawy. Nadal są suplementowane algami morskimi, które zapewniając niezbędne aminokwasy, kwasy tłuszczowe omega-3, witamin i jodu. Jak i również poprawiają wybarwienie sierści i zmniejszają tworzenie się kamienia nazębnego.",
+        },
+    ],
+    buttonInfo: {
+        type: "anchor",
+        text: "Strona główna",
+        color: "royalPink",
+        link: "/",
+    },
+};
