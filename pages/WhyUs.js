@@ -3,10 +3,10 @@ import PhotoAndTextWrapper from "../components/PhotoAndTextWrapper";
 import Button from "../components/Button";
 import { whyUsDetails } from "../public/content";
 
-const WhyUs = () => {
+const WhyUs = ({ content }) => {
     return (
-        <PhotoAndTextWrapper bgInfo={false}>
-            {whyUsDetails.sections.map((section) => (
+        <PhotoAndTextWrapper bgInfo={content.backgroundInfo}>
+            {content.sections.map((section) => (
                 <PhotoAndText
                     key={section.headline}
                     headline={section.headline}
@@ -17,13 +17,21 @@ const WhyUs = () => {
             ))}
 
             <Button
-                type={whyUsDetails.buttonInfo.type}
-                text={whyUsDetails.buttonInfo.text}
-                color={whyUsDetails.buttonInfo.color}
-                link={whyUsDetails.buttonInfo.link}
+                type={content.buttonInfo.type}
+                text={content.buttonInfo.text}
+                color={content.buttonInfo.color}
+                link={content.buttonInfo.link}
             />
         </PhotoAndTextWrapper>
     );
 };
+
+export function getStaticProps() {
+    return {
+        props: {
+            content: whyUsDetails,
+        },
+    };
+}
 
 export default WhyUs;

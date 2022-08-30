@@ -4,7 +4,7 @@ import PhotoAndTextWrapper from "../components/PhotoAndTextWrapper";
 import Button from "../components/Button";
 import { litterA as litter } from "../public/content";
 
-const LitterA = () => {
+const LitterA = ({ content }) => {
     return (
         <PhotoAndTextWrapper bgInfo={litter.backgroundInfo}>
             {litter.dogs.map((dog) => (
@@ -18,13 +18,13 @@ const LitterA = () => {
             ))}
             <div className="w-full flex flex-col items-center lg:w-9/12 lg:p-4">
                 <h3 className="font-titan-one text-2xl my-4 sm:text-3xl">
-                    {litter.parents.headline}
+                    {content.parents.headline}
                 </h3>
                 <p className="font-radio-canada text-sm leading-relaxed text-justify my-4 md:text-base lg:text-lg">
-                    {litter.parents.description}
+                    {content.parents.description}
                 </p>
                 <div className="w-full flex flex-col sm:flex-row">
-                    {litter.parents.dogs.map((dog) => (
+                    {content.parents.dogs.map((dog) => (
                         <div
                             key={dog.name}
                             className="w-full flex flex-col items-center my-2 md:w-1/2 sm:odd:mr-1 sm:even:ml-1 md:odd:mr-2 md:even:ml-2 lg:odd:mr-4 lg:even:ml-4"
@@ -45,13 +45,21 @@ const LitterA = () => {
                 </div>
             </div>
             <Button
-                type={litter.buttonInfo.type}
-                text={litter.buttonInfo.text}
-                color={litter.buttonInfo.color}
-                link={litter.buttonInfo.link}
+                type={content.buttonInfo.type}
+                text={content.buttonInfo.text}
+                color={content.buttonInfo.color}
+                link={content.buttonInfo.link}
             />
         </PhotoAndTextWrapper>
     );
 };
+
+export function getStaticProps() {
+    return {
+        props: {
+            content: litter,
+        },
+    };
+}
 
 export default LitterA;

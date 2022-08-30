@@ -1,12 +1,11 @@
-import { mobileNavbar } from "../public/content";
 import Link from "next/link";
 import Submenu from "./Submenu";
 
-const MobileNavbar = () => {
+const MobileNavbar = ({ content }) => {
     return (
         <div className="fixed bottom-0 w-full h-60px bg-babyBlue-0 sm:h-80px lg:hidden">
             <ul className="flex basis-full h-full justify-evenly items-center font-radio-canada">
-                {mobileNavbar.map((listElement) => (
+                {content.map((listElement) => (
                     <li
                         key={listElement.text}
                         className="flex basis-1/5 justify-center"

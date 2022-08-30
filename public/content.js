@@ -31,30 +31,26 @@ export const metaData = {
     title: "Szczęśliwy Puszek",
 };
 
-export const layout = {
-    header: {
-        title: "Szczęśliwy Puszek",
-        menu: [
-            { text: "Strona główna", array: null, linkTo: "/", icon: null },
-            {
-                text: "Psy",
-                array: [
-                    { name: "Pola", color: "royalPink", linkTo: "/Pola" },
-                    { name: "William", color: "babyBlue", linkTo: "/William" },
-                ],
-                icon: IoMdArrowDropdown,
-            },
-            {
-                text: "Mioty",
-                array: [
-                    { name: "Miot a", color: "babyBlue", linkTo: "/LitterA" },
-                ],
-                icon: IoMdArrowDropdown,
-            },
-            { text: "Galeria", array: null, linkTo: "/Gallery", icon: null },
-            { text: "Kontakt", array: null, linkTo: "/", icon: null },
-        ],
-    },
+export const navbar = {
+    title: "Szczęśliwy Puszek",
+    menu: [
+        { text: "Strona główna", array: null, linkTo: "/", icon: null },
+        {
+            text: "Psy",
+            array: [
+                { name: "Pola", color: "royalPink", linkTo: "/Pola" },
+                { name: "William", color: "babyBlue", linkTo: "/William" },
+            ],
+            icon: IoMdArrowDropdown,
+        },
+        {
+            text: "Mioty",
+            array: [{ name: "Miot a", color: "babyBlue", linkTo: "/LitterA" }],
+            icon: IoMdArrowDropdown,
+        },
+        { text: "Galeria", array: null, linkTo: "/Gallery", icon: null },
+        { text: "Kontakt", array: null, linkTo: "/", icon: null },
+    ],
 };
 
 export const contact = {
@@ -381,6 +377,11 @@ export const whyUsDetails = {
             text: "W naszej hodowli psy są karmione, karmą suchą marki Royal Canin oraz często dodatkowymi posiłkami typu BARF. Do przez cały okres dojrzewania otrzymywały odpowiednie witaminy i suplementy na zdrowe stawy. Nadal są suplementowane algami morskimi, które zapewniając niezbędne aminokwasy, kwasy tłuszczowe omega-3, witamin i jodu. Jak i również poprawiają wybarwienie sierści i zmniejszają tworzenie się kamienia nazębnego.",
         },
     ],
+    backgroundInfo: {
+        image: "/images/index/background-blue.webp",
+        positionMobile: "top;",
+        positionDesktop: "center;",
+    },
     buttonInfo: {
         type: "anchor",
         text: "Strona główna",

@@ -3,9 +3,9 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Slide from "../components/Slide";
 import WhyUs from "../components/WhyUs";
 import OurDogs from "../components/OurDogs";
-import { slider } from "../public/content";
+import { slider, whyUs, ourDogs } from "../public/content";
 
-const Home = ({ content }) => {
+const Home = ({ slider, whyUsSection, ourDogsSection }) => {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
@@ -52,13 +52,13 @@ const Home = ({ content }) => {
                         index === 0 ? "translate-x-0" : "translate-x-100"
                     }`}
                 >
-                    {content.map((slide) => (
+                    {slider.map((slide) => (
                         <Slide key={slide.bgPhoto} content={slide} />
                     ))}
                 </div>
             </div>
-            <WhyUs />
-            <OurDogs />
+            <WhyUs content={whyUsSection} />
+            <OurDogs content={ourDogsSection} />
         </>
     );
 };
@@ -66,7 +66,9 @@ const Home = ({ content }) => {
 export async function getStaticProps() {
     return {
         props: {
-            content: slider.slides,
+            slider: slider.slides,
+            whyUsSection: whyUs,
+            ourDogsSection: ourDogs,
         },
     };
 }
