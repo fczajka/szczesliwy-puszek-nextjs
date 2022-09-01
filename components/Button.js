@@ -13,17 +13,15 @@ const Button = ({ type, text, color, link }) => {
                 color === "babyBlue"
                     ? "border-babyBlue-700"
                     : "border-royalPink-700"
-            } border-b-4 cursor-pointer hover:border-b-0 hover:translate-y-1 hover:mb-1`}
+            } border-b-4 cursor-pointer hover:border-b-0 text-sm font-bold hover:translate-y-1 hover:mb-1`}
         >
-            {type === "button" ? (
-                <button className="block px-3 py-2 text-sm font-bold bg-r tracking-wider">
+            {type === "submit" ? (
+                <button type="submit" className="w-full text-center px-3 py-5">
                     {text}
                 </button>
             ) : (
                 <Link href={link}>
-                    <a className="block px-3 py-2 text-sm font-bold tracking-wider">
-                        {text}
-                    </a>
+                    <a className="block w-full text-center px-3 py-2">{text}</a>
                 </Link>
             )}
         </div>

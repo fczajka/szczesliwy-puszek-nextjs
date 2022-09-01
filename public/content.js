@@ -2,6 +2,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { FaDog, FaPaw } from "react-icons/fa";
 import { AiFillHome, AiFillPhone } from "react-icons/ai";
 import { RiGalleryFill } from "react-icons/ri";
+import { MdLocationPin, MdMail } from "react-icons/md";
 
 import gallery1 from "./images/gallery/gallery1.webp";
 import gallery2 from "./images/gallery/gallery2.webp";
@@ -49,7 +50,7 @@ export const navbar = {
             icon: IoMdArrowDropdown,
         },
         { text: "Galeria", array: null, linkTo: "/Gallery", icon: null },
-        { text: "Kontakt", array: null, linkTo: "/", icon: null },
+        { text: "Kontakt", array: null, linkTo: "#contact", icon: null },
     ],
 };
 
@@ -61,13 +62,22 @@ export const contact = {
             { label: "E-mail:" },
             { label: "Wiadomość:" },
         ],
+        buttonInfo: {
+            type: "submit",
+            text: "Wyślij wiadomość!",
+            color: "royalPink",
+            link: null,
+        },
     },
     staticInformation: {
         description: "W razie wszelkich wątpliwości zapraszamy do kontaktu.",
         contactInformation: [
-            { icon: "...", information: "Koninko, Wielkopolska" },
-            { icon: "...", information: "123 456 789" },
-            { icon: "...", information: "example@mail.com" },
+            { icon: MdLocationPin, information: "Koninko, Wielkopolska" },
+            { icon: AiFillPhone, information: "508 310 184" },
+            {
+                icon: MdMail,
+                information: "szczesliwy.puszek@gmail.com",
+            },
         ],
     },
 };
@@ -347,7 +357,7 @@ export const mobileNavbar = [
     },
     { text: "Główna", array: null, linkTo: "/", icon: AiFillHome },
     { text: "Galeria", array: null, linkTo: "/Gallery", icon: RiGalleryFill },
-    { text: "Kontakt", array: null, linkTo: "/", icon: AiFillPhone },
+    { text: "Kontakt", array: null, linkTo: "#contact", icon: AiFillPhone },
 ];
 
 export const whyUsDetails = {

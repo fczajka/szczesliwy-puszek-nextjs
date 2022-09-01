@@ -17,9 +17,7 @@ const WhyUs = ({ photo, headline, text, buttonText }) => {
                 />
             </div>
             <div className="p-4 text-babyBlue-1500">
-                <h3 className="font-titan-one tracking-wide mb-2">
-                    {headline}
-                </h3>
+                <h3 className="font-titan-one mb-2">{headline}</h3>
                 <p className="font-radio-canada text-sm leading-relaxed text-justify">
                     {text}
                 </p>

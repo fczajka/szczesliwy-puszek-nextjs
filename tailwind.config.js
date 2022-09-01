@@ -46,6 +46,9 @@ module.exports = {
             margin: {
                 "10vh": "10vh",
             },
+            padding: {
+                "32-24": "calc(8rem + 24px)",
+            },
             translate: {
                 "translate-0-5": "transform: translateX(0px,5px)",
             },
