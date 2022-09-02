@@ -45,6 +45,8 @@ module.exports = {
             },
             margin: {
                 "10vh": "10vh",
+                "60px": "60px",
+                "80px": "80px",
             },
             padding: {
                 "32-24": "calc(8rem + 24px)",

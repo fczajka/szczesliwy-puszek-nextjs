@@ -58,9 +58,9 @@ export const contact = {
     mail: {
         header: "Napisz do nas!",
         form: [
-            { label: "Imię:" },
-            { label: "E-mail:" },
-            { label: "Wiadomość:" },
+            { label: "Imię:", name: "name", type: "text" },
+            { label: "E-mail:", name: "email", type: "text" },
+            { label: "Wiadomość:", name: "message", type: null },
         ],
         buttonInfo: {
             type: "submit",
