@@ -26,7 +26,7 @@ import WilliamPhoto from "./images/index/William.webp";
 import Betsy from "./images/litter-a/Betsy.webp";
 import Boni from "./images/litter-a/Boni.webp";
 import Baki from "./images/litter-a/Baki.webp";
-import BascoSmall from "./images/litter-a/Basco-small.webp";
+import BascoBig from "./images/index/Basco-big.webp";
 
 export const metaData = {
     title: "Szczęśliwy Puszek",
@@ -85,7 +85,7 @@ export const contact = {
 export const slider = {
     slides: [
         {
-            bgPhoto: "/images/index/Basco-big.webp",
+            bgPhoto: BascoBig,
             bgPosition: "center",
             headline: "Weź jednego ze sobą",
             subline: "I nie każ sobie dłużej czekać",
@@ -94,7 +94,7 @@ export const slider = {
             linkTo: "#whyUs",
         },
         {
-            bgPhoto: "/images/index/William.webp",
+            bgPhoto: WilliamPhoto,
             bgPosition: "50% 30%",
             headline: "Mam na imię William",
             subline: "Jestem reproduktorem",
@@ -249,7 +249,7 @@ export const litterA = {
         },
         {
             name: "Basco",
-            image: BascoSmall,
+            image: BascoBig,
             description:
                 "Przystojny chłopiec, bardzo dobrze zbudowany o pięknym puchatym futerku. Wykazuje zdecydowane cechy samca, chętny do zabawy oraz kontaktu z ludźmi. Zawsze gotów na przechadzkę. Urodzony kompan do przygody.",
             alt: "Szczeniak Samoyed o imieniu Basco",
