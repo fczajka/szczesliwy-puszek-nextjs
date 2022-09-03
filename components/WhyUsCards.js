@@ -3,10 +3,7 @@ import Button from "./Button";
 
 const WhyUs = ({ photo, headline, text, buttonText }) => {
     return (
-        <div
-            id="whyUs"
-            className="relative w-256 h-104 bg-babyBlue-100 rounded-md mt-12 transition-all shadow-md shadow-babyBlue-200 hover:scale-105"
-        >
+        <div className="relative w-256 h-104 bg-babyBlue-100 rounded-md mt-12 transition-all shadow-md shadow-babyBlue-200 hover:scale-105">
             <div className="relative h-1/2">
                 <Image
                     className="rounded-t-md"

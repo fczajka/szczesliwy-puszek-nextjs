@@ -48,7 +48,7 @@ const Slider = ({ content }) => {
                 }`}
             >
                 {content.map((slide) => (
-                    <Slide key={slide.bgPhoto} content={slide} />
+                    <Slide key={slide.headline} content={slide} />
                 ))}
             </div>
         </div>

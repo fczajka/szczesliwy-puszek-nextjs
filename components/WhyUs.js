@@ -2,7 +2,10 @@ import WhyUsCards from "./WhyUsCards";
 
 const WhyUs = ({ content }) => {
     return (
-        <div className="w-full flex flex-col items-center bg-why-us bg-no-repeat md:px-20 2xl:px-28">
+        <div
+            id="whyUs"
+            className="w-full flex flex-col items-center bg-why-us bg-no-repeat md:px-20 2xl:px-28"
+        >
             <h2 className="my-16 mb-4 font-titan-one text-royalPink-1500 text-3xl sm:text-4xl">
                 {content.title}
             </h2>
