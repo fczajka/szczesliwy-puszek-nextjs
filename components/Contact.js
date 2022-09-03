@@ -1,12 +1,15 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import * as EmailValidator from "email-validator";
 import emailjs from "@emailjs/browser";
 import Button from "./Button";
+import Context from "./Context";
 
 const Contact = ({ content }) => {
     const form = useRef();
+
+    const [env] = useContext(Context);
 
     const contextClass = {
         success: "bg-green-200",
@@ -42,10 +45,10 @@ const Contact = ({ content }) => {
         } else if (EmailValidator.validate(form.current.email.value)) {
             const sendMail = emailjs
                 .sendForm(
-                    process.env.SERVICE_ID,
-                    process.env.TEMPLATE_ID,
+                    env.serviceId,
+                    env.templateId,
                     form.current,
-                    process.env.PUBLIC_KEY
+                    env.keyId
                 )
                 .then(
                     () => {

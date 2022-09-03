@@ -1,9 +1,12 @@
 import "../styles/globals.css";
 import Head from "next/head";
+import { useState } from "react";
 import Layout from "../components/Layout";
 import { metaData } from "../public/content";
+import Context from "../components/Context";
 
 function MyApp({ Component, pageProps }) {
+    const context = useState({});
     return (
         <>
             <Head>
@@ -17,9 +20,11 @@ function MyApp({ Component, pageProps }) {
                     content="Adoptuj swojego wymarzonego pieska z hodowli, która dba o każdy aspekt rozwoju malucha!"
                 />
             </Head>
-            <Layout>
-                <Component {...pageProps} />
-            </Layout>
+            <Context.Provider value={context}>
+                <Layout>
+                    <Component {...pageProps} />
+                </Layout>
+            </Context.Provider>
         </>
     );
 }
