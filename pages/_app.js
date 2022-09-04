@@ -13,7 +13,6 @@ function MyApp({ Component, pageProps }) {
 
     useEffect(() => {
         setCurrentPathname(pathname);
-        console.log(currentPathname, pathname);
         if (currentPathname !== pathname) {
             window.scrollTo({ top: 0, left: 0, behavior: "instant" });
         }
