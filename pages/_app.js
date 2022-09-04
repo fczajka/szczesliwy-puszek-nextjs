@@ -1,12 +1,24 @@
 import "../styles/globals.css";
 import Head from "next/head";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import { metaData } from "../public/content";
 import Context from "../components/Context";
 
 function MyApp({ Component, pageProps }) {
     const context = useState({});
+    const { pathname } = useRouter();
+    const [currentPathname, setCurrentPathname] = useState(pathname);
+
+    useEffect(() => {
+        setCurrentPathname(pathname);
+        console.log(currentPathname, pathname);
+        if (currentPathname !== pathname) {
+            window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+        }
+    }, [pathname]);
+
     return (
         <>
             <Head>
