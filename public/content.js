@@ -181,46 +181,61 @@ export const ourDogs = {
 };
 
 export const Pola = {
-    photo: "...",
-    description: {
-        name: "Pola",
-        firstLine: "Suczka pochodząca z rodowitych terenów rasy.",
-        text: "Suczka o bardzo pogodniej naturze, niezwykle cierpliwa i spokojna w kontakcie z ludźmi. Wysoce opiekuńcza w stosunku do swoich dzieci, naturalna przewodniczka. Nigdy nie przejawiała tendencji niszczycielskich, świetnie znosi podróże krótkie i długie. Pola jest naszą pierwszą suczką w hodowli i od początku była bardzo podatna na wszelkie nauki zachowania i czystości, oczywiście przy wykorzystaniu przekonywujących nagród 😊.",
-        addText: "",
-        params: {
-            sex: "Suczka",
-            dateOfBirth: "...",
-            father: "...",
-            mother: "...",
-            tests: "...",
-            owner: "...",
-            breeder: "...",
-            height: "53cm",
-            weight: "20kg",
+    photo: PolaPhoto,
+    name: "Pola",
+    alt: "Pies, samoyed o imieniu Pola",
+    firstLine: "Suczka pochodząca z rodowitych terenów rasy.",
+    text: "Suczka o bardzo pogodniej naturze, niezwykle cierpliwa i spokojna w kontakcie z ludźmi. Wysoce opiekuńcza w stosunku do swoich dzieci, naturalna przewodniczka. Nigdy nie przejawiała tendencji niszczycielskich, świetnie znosi podróże krótkie i długie. Pola jest naszą pierwszą suczką w hodowli i od początku była bardzo podatna na wszelkie nauki zachowania i czystości, oczywiście przy wykorzystaniu przekonywujących nagród 😊.",
+    addText: null,
+    params: [
+        { key: "Płeć", value: "Suczka" },
+        { key: "Data urodzenia", value: "04.05.2020" },
+        {
+            key: "Ojciec",
+            value: "ALKHABOR ALMIRA TRIUMPHANT SHERLOCK (CH RUS, JCH RUS, CH RKF BST)",
         },
-        buttonText: "Strona głowna",
+        { key: "Matka", value: "IZDOMASU ORMI LIGHT" },
+        { key: "Badania", value: "Stawy HD/A, Eyes - Clear" },
+        { key: "Właściciel", value: "Ewa Wawrzeńczyk" },
+        { key: "Hodowca", value: "MAKAROVA A.A." },
+        { key: "Wzrost", value: "53cm" },
+        { key: "Waga", value: "20kg" },
+    ],
+    titles: [
+        "Open Champion of Poland",
+        "Jr. Champion of Macedonia",
+        "Grand Champion of Romania",
+        "Jr. Champion of Croatia",
+    ],
+    buttonInfo: {
+        type: "anchor",
+        text: "Strona głowna!",
+        color: "royalPink",
+        link: "/",
     },
 };
 
 export const William = {
-    photo: "...",
-    description: {
-        name: "William",
-        firstLine: "Samiec pochodzenia Ukraińskiego.",
-        text: "William przejawia naturalne cechy rasy, jest bardzo energiczny i przyjazny. Każdego w domu traktuje jako swoje stado czy to człowiek czy to kot. Jest podatny na naukę, ale potrzebuje do tego smacznej nagrody 😊.",
-        addText: "William posiada pełne legalne uprawnienie Reproduktora.",
-        params: {
-            sex: "Samiec",
-            dateOfBirth: "...",
-            father: "...",
-            mother: "...",
-            tests: "...",
-            owner: "...",
-            breeder: "...",
-            height: "53cm",
-            weight: "20kg",
-        },
-        buttonText: "Strona głowna",
+    photo: WilliamPhoto,
+    name: "William",
+    alt: "Pies, samoyed o imieniu William",
+    firstLine: "Samiec pochodzenia Ukraińskiego.",
+    text: "William przejawia naturalne cechy rasy, jest bardzo energiczny i przyjazny. Każdego w domu traktuje jako swoje stado czy to człowiek czy to kot. Jest podatny na naukę, ale potrzebuje do tego smacznej nagrody 😊.",
+    addText: "William posiada pełne legalne uprawnienie Reproduktora.",
+    params: [
+        { key: "Płeć", value: "Samiec" },
+        { key: "Data urodzenia", value: "29.12.2019" },
+        { key: "Badania", value: "Stawy HD/A, Eyes - Clear" },
+        { key: "Właściciel", value: "Ewa Wawrzeńczyk" },
+        { key: "Hodowca", value: "NORTH DIAMOND" },
+        { key: "Wzrost", value: "56cm" },
+        { key: "Waga", value: "22kg" },
+    ],
+    buttonInfo: {
+        type: "anchor",
+        text: "Strona głowna!",
+        color: "babyBlue",
+        link: "/",
     },
 };
 
