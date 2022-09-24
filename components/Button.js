@@ -20,7 +20,7 @@ const Button = ({ type, text, color, link }) => {
                     {text}
                 </button>
             ) : (
-                <Link href={link}>
+                <Link href={link} scroll={false}>
                     <a className="block w-full text-center px-3 py-2">{text}</a>
                 </Link>
             )}
