@@ -5,14 +5,12 @@ import { useState, useEffect } from "react";
 const variants = {
     in: {
         opacity: 1,
-        scale: 1,
         transition: {
             duration: 0.3,
         },
     },
     out: {
         opacity: 0,
-        scale: 1,
         transition: {
             duration: 0.3,
         },
@@ -28,8 +26,9 @@ const Transition = ({ children }) => {
     }, [pathname]);
 
     return (
-        <AnimatePresence initial={true} exitBeforeEnter>
+        <AnimatePresence initial={true} mode="wait">
             <motion.div
+                style={{ width: "100%", maxWidth: "1920px" }}
                 key={
                     (pathname.includes("#contact") ||
                         pathname.includes("whyUs")) === "true"

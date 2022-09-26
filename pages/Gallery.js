@@ -15,7 +15,7 @@ const Gallery = () => {
                                 {column.photos.map((photo) => (
                                     <div
                                         key={photo.alt}
-                                        className="relative w-full h-96 lg:h-72 xl:h-96 my-4 first:my-2 last:my-2"
+                                        className="relative h-96 lg:h-72 xl:h-96 my-4 first:my-2 last:my-2"
                                     >
                                         <Image
                                             src={photo.src}
