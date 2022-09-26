@@ -225,6 +225,8 @@ export const William = {
     params: [
         { key: "Płeć", value: "Samiec" },
         { key: "Data urodzenia", value: "29.12.2019" },
+        { key: "Ojciec", value: "CRYSTAL SNOWFLAKE ASKANIO" },
+        { key: "Matka", value: "WHITE EVENK SAYURI HANAYORI" },
         { key: "Badania", value: "Stawy HD/A, Eyes - Clear" },
         { key: "Właściciel", value: "Ewa Wawrzeńczyk" },
         { key: "Hodowca", value: "NORTH DIAMOND" },
