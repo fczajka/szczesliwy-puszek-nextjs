@@ -7,14 +7,14 @@ const variants = {
         opacity: 1,
         scale: 1,
         transition: {
-            duration: 0.75,
+            duration: 0.3,
         },
     },
     out: {
         opacity: 0,
         scale: 1,
         transition: {
-            duration: 0.75,
+            duration: 0.3,
         },
     },
 };

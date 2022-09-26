@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         if (currentPathname !== pathname) {
             const timer = setTimeout(() => {
                 window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-            }, 750);
+            }, 300);
             return () => clearTimeout(timer);
         }
     }, [pathname]);
