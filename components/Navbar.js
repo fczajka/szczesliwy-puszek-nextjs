@@ -6,7 +6,7 @@ const Navbar = ({ content }) => {
         <div className="w-full h-60px relative shadow-md sm:h-80px">
             <div className="w-full h-full max-w-1920 flex my-0 mx-auto">
                 <div className="w-full text-3xl flex items-center justify-center font-titan-one sm:text-4xl lg:basis-7/12">
-                    <Link href="/">
+                    <Link href="/" scroll={false}>
                         <a>{content.title}</a>
                     </Link>
                 </div>
@@ -16,7 +16,7 @@ const Navbar = ({ content }) => {
                             {listElement.array ? (
                                 <Submenu submenu={listElement} mobile={false} />
                             ) : (
-                                <Link href={listElement.linkTo}>
+                                <Link href={listElement.linkTo} scroll={false}>
                                     <a>
                                         {listElement.text}
                                         {listElement.icon ? (

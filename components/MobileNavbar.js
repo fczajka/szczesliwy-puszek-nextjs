@@ -13,7 +13,7 @@ const MobileNavbar = ({ content }) => {
                         {listElement.array ? (
                             <Submenu submenu={listElement} mobile={true} />
                         ) : (
-                            <Link href={listElement.linkTo}>
+                            <Link href={listElement.linkTo} scroll={false}>
                                 <a className="flex flex-col items-center">
                                     {listElement.icon ? (
                                         <listElement.icon />

@@ -69,7 +69,7 @@ const Submenu = ({ submenu, mobile }) => {
                                 : "hover:bg-babyBlue-100"
                         }
                     >
-                        <Link href={`${submenuElement.linkTo}`}>
+                        <Link href={`${submenuElement.linkTo}`} scroll={false}>
                             <a
                                 className="py-0.5 px-4 block"
                                 onClick={() => {
