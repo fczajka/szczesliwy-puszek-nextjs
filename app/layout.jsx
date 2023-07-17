@@ -5,6 +5,12 @@ import Contact from "../components/Contact";
 import Transition from "../components/Transition";
 import { defaultFont } from "../public/fonts";
 
+export const metadata = {
+    title: "Szczesliwy Puszek",
+    description:
+        "Adoptuj swojego wymarzonego pieska z hodowli, która dba o każdy aspekt rozwoju malucha!",
+};
+
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className="scroll-smooth motion-reduce:scroll-auto">

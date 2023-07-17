@@ -19,7 +19,6 @@ const Contact = () => {
     };
 
     const sendEmail = (e) => {
-        console.log(e.target, form.current.name.value);
         e.preventDefault();
 
         form.current.name.value = form.current.name.value.trim();
