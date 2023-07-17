@@ -1,8 +1,8 @@
 import "./globals.css";
-import Navbar from "../components/navbar";
-import MobileNavbar from "../components/mobileNavbar";
-import Contact from "../components/contact";
-import Transition from "../components/transition";
+import Navbar from "../components/Navbar";
+import MobileNavbar from "../components/MobileNavbar";
+import Contact from "../components/Contact";
+import Transition from "../components/Transition";
 import { defaultFont } from "../public/fonts";
 
 export default function RootLayout({ children }) {

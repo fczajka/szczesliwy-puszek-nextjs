@@ -1,6 +1,6 @@
-import Slider from "../components/slider";
-import WhyUs from "../components/whyUs";
-import OurDogs from "../components/ourDogs";
+import Slider from "../components/Slider";
+import WhyUs from "../components/WhyUs";
+import OurDogs from "../components/OurDogs";
 
 export default function Home() {
     return (
