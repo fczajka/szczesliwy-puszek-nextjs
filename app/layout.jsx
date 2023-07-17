@@ -1,8 +1,8 @@
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import MobileNavbar from "../components/MobileNavbar";
-import Contact from "../components/Contact";
-import Transition from "../components/Transition";
+import Navbar from "../components/Layout/Navbar";
+import MobileNavbar from "../components/Layout/MobileNavbar";
+import Contact from "../components/Layout/Contact";
+import Transition from "../components/Ui/Transition";
 import { defaultFont } from "../public/fonts";
 
 export const metadata = {

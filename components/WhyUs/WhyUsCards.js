@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Button from "./Button";
-import { headlineFont } from "../public/fonts";
+import Button from "../Ui/Button";
+import { headlineFont } from "../../public/fonts";
 
 const WhyUs = ({ photo, headline, text, buttonText }) => {
     return (

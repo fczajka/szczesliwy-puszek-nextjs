@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "./Button";
+import Button from "../Ui/Button";
 
 const Slide = ({ slider }) => {
     const { bgPhoto, headline, subline, anchorText, anchorColor, linkTo } =

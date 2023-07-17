@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Button from "./Button";
-import PhotoAndTextWrapper from "./PhotoAndTextWrapper";
-import { headlineFont } from "../public/fonts";
+import Button from "../Ui/Button";
+import PhotoAndTextWrapper from "../Ui/PhotoAndTextWrapper";
+import { headlineFont } from "../../public/fonts";
 
 const OurDogsDetails = ({ content }) => {
     return (

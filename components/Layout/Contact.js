@@ -5,9 +5,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import * as EmailValidator from "email-validator";
 import emailjs from "@emailjs/browser";
-import Button from "./Button";
-import { contact } from "../public/content";
-import { headlineFont } from "../public/fonts";
+import Button from "../Ui/Button";
+import { contact } from "../../public/content";
+import { headlineFont } from "../../public/fonts";
 
 const Contact = () => {
     const form = useRef();

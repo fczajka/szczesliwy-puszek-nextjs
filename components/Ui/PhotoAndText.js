@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "./Button";
-import { headlineFont } from "../public/fonts";
+import { headlineFont } from "../../public/fonts";
 
 const PhotoAndText = ({ headline, image, alt, text, buttonInfo }) => {
     return (

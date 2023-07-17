@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import Slide from "../components/Slide";
-import { slider } from "../public/content";
+import Slide from "./Slide";
+import { slider } from "../../public/content";
 
 const Slider = () => {
     const [index, setIndex] = useState(0);

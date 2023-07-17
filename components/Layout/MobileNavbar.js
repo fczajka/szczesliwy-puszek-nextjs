@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Submenu from "./Submenu";
-import { mobileNavbar } from "../public/content";
+import Submenu from "../Ui/Submenu";
+import { mobileNavbar } from "../../public/content";
 
 const MobileNavbar = () => {
     return (
