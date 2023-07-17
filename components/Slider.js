@@ -1,8 +1,11 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Slide from "../components/Slide";
+import { slider } from "../public/content";
 
-const Slider = ({ content }) => {
+const Slider = () => {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
@@ -20,6 +23,7 @@ const Slider = ({ content }) => {
         );
         return () => clearTimeout(change);
     }, [index]);
+
     return (
         <div className="relative overflow-hidden h-full">
             <ul className="absolute w-full flex justify-center bottom-20 z-10">
@@ -47,8 +51,8 @@ const Slider = ({ content }) => {
                     index === 0 ? "translate-x-0" : "translate-x-100"
                 }`}
             >
-                {content.map((slide) => (
-                    <Slide key={slide.headline} content={slide} />
+                {slider.slides.map((slide) => (
+                    <Slide key={slide.headline} slider={slide} />
                 ))}
             </div>
         </div>

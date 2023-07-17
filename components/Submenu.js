@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
@@ -69,15 +71,14 @@ const Submenu = ({ submenu, mobile }) => {
                                 : "hover:bg-babyBlue-100"
                         }
                     >
-                        <Link href={`${submenuElement.linkTo}`} scroll={false}>
-                            <a
-                                className="py-0.5 px-4 block"
-                                onClick={() => {
-                                    setIsOpenSubmenu(!isOpenSubmenu);
-                                }}
-                            >
-                                {submenuElement.name}
-                            </a>
+                        <Link
+                            href={`${submenuElement.linkTo}`}
+                            className="py-0.5 px-4 block"
+                            onClick={() => {
+                                setIsOpenSubmenu(!isOpenSubmenu);
+                            }}
+                        >
+                            {submenuElement.name}
                         </Link>
                     </li>
                 ))}

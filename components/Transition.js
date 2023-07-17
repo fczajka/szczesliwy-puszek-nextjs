@@ -1,48 +1,35 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+"use client";
 
-const variants = {
-    in: {
+import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+
+const Transition = ({ children }) => {
+    const pathname = usePathname();
+
+    const animateIn = {
         opacity: 1,
         transition: {
             duration: 0.3,
         },
-    },
-    out: {
+    };
+
+    const animateOut = {
         opacity: 0,
         transition: {
             duration: 0.3,
         },
-    },
-};
-
-const Transition = ({ children }) => {
-    const { pathname } = useRouter();
-    const [currentPathname, setCurrentPathname] = useState(pathname);
-
-    useEffect(() => {
-        setCurrentPathname(pathname);
-    }, [pathname]);
+    };
 
     return (
-        <AnimatePresence initial={true} mode="wait">
-            <motion.div
-                style={{ width: "100%", maxWidth: "1920px" }}
-                key={
-                    (pathname.includes("#contact") ||
-                        pathname.includes("whyUs")) === "true"
-                        ? currentPathname
-                        : pathname
-                }
-                variants={variants}
-                animate="in"
-                initial="out"
-                exit="out"
-            >
-                {children}
-            </motion.div>
-        </AnimatePresence>
+        <motion.div
+            style={{ width: "100%", maxWidth: "1920px" }}
+            key={pathname}
+            animate={animateIn}
+            initial={animateOut}
+            exit={animateOut}
+        >
+            {children}
+        </motion.div>
     );
 };
 

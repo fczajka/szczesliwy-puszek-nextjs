@@ -1,13 +1,17 @@
 import PhotoAndText from "./PhotoAndText";
 import PhotoAndTextWrapper from "./PhotoAndTextWrapper";
+import { headlineFont } from "../public/fonts";
+import { ourDogs } from "../public/content";
 
-const OurDogs = ({ content }) => {
+const OurDogs = () => {
     return (
-        <PhotoAndTextWrapper bgInfo={content.backgroundInfo}>
-            <h2 className="my-16 font-titan-one text-babyBlue-1500 text-3xl sm:text-4xl">
-                {content.title}
+        <PhotoAndTextWrapper bgInfo={ourDogs.backgroundInfo}>
+            <h2
+                className={`my-16 font-headline ${headlineFont.variable} text-babyBlue-1500 text-3xl sm:text-4xl`}
+            >
+                {ourDogs.title}
             </h2>
-            {content.dogs.map((dog) => (
+            {ourDogs.dogs.map((dog) => (
                 <PhotoAndText
                     key={dog.name}
                     headline={dog.name}

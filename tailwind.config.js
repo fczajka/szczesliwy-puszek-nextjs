@@ -1,8 +1,8 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    mode: "jit",
     content: [
-        "./pages/**/*.{js,ts,jsx,tsx}",
+        "./app/**/*.{js,ts,jsx,tsx}",
         "./components/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
@@ -88,8 +88,8 @@ module.exports = {
                 },
             },
             fontFamily: {
-                "titan-one": ["Titan One"],
-                "radio-canada": ["Radio Canada"],
+                headline: ["var(--font-headline)", ...fontFamily.sans],
+                default: ["var(--font-default)", ...fontFamily.sans],
             },
             translate: {
                 100: "-100%",

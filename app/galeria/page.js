@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { gallery } from "../public/content";
+import Button from "../../components/Button";
+import { gallery } from "../../public/content";
 
 const Gallery = () => {
     return (
@@ -8,7 +9,7 @@ const Gallery = () => {
                 {gallery.map((sides) => (
                     <div
                         key={sides.side}
-                        className="w-full flex flex-col sm:flex-row"
+                        className="w-full flex flex-col sm:flex-row lg:flex-row"
                     >
                         {sides.columns.map((column) => (
                             <div key={column.order} className="w-full px-2">
@@ -18,10 +19,9 @@ const Gallery = () => {
                                         className="relative h-96 lg:h-72 xl:h-96 my-4 first:my-2 last:my-2"
                                     >
                                         <Image
+                                            className="object-cover w-full h-full"
                                             src={photo.src}
                                             alt={photo.alt}
-                                            layout="fill"
-                                            objectFit="cover"
                                         />
                                     </div>
                                 ))}
@@ -30,16 +30,16 @@ const Gallery = () => {
                     </div>
                 ))}
             </div>
+            <div className="flex justify-center pt-4 pb-10">
+                <Button
+                    type={"anchor"}
+                    text={"Strona główna"}
+                    color={"babyBlue"}
+                    link={"/"}
+                />
+            </div>
         </div>
     );
 };
-
-export function getStaticProps() {
-    return {
-        props: {
-            content: gallery,
-        },
-    };
-}
 
 export default Gallery;

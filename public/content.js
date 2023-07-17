@@ -46,10 +46,10 @@ export const navbar = {
         },
         {
             text: "Mioty",
-            array: [{ name: "Miot a", color: "babyBlue", linkTo: "/LitterA" }],
+            array: [{ name: "Miot a", color: "babyBlue", linkTo: "/miot-a" }],
             icon: IoMdArrowDropdown,
         },
-        { text: "Galeria", array: null, linkTo: "/Gallery", icon: null },
+        { text: "Galeria", array: null, linkTo: "/galeria", icon: null },
         { text: "Kontakt", array: null, linkTo: "#contact", icon: null },
     ],
 };
@@ -86,7 +86,6 @@ export const slider = {
     slides: [
         {
             bgPhoto: BascoBig,
-            bgPosition: "center",
             headline: "Weź jednego ze sobą",
             subline: "I nie każ sobie dłużej czekać",
             anchorText: "Sprawdź",
@@ -95,7 +94,6 @@ export const slider = {
         },
         {
             bgPhoto: WilliamPhoto,
-            bgPosition: "50% 30%",
             headline: "Mam na imię William",
             subline: "Jestem reproduktorem",
             anchorText: "Poczytaj o mnie!",
@@ -174,9 +172,7 @@ export const ourDogs = {
         },
     ],
     backgroundInfo: {
-        image: "/images/index/background-blue.webp",
-        positionMobile: "top;",
-        positionDesktop: "center;",
+        image: "true",
     },
 };
 
@@ -289,9 +285,7 @@ export const litterA = {
     },
     buttonText: "Strona główna",
     backgroundInfo: {
-        image: "/images/index/background-blue.webp",
-        positionMobile: "top;",
-        positionDesktop: "center;",
+        image: "true",
     },
 };
 
@@ -369,11 +363,11 @@ export const mobileNavbar = [
     },
     {
         text: "Mioty",
-        array: [{ name: "Miot a", color: "babyBlue", linkTo: "/LitterA" }],
+        array: [{ name: "Miot a", color: "babyBlue", linkTo: "/miot-a" }],
         icon: FaPaw,
     },
     { text: "Główna", array: null, linkTo: "/", icon: AiFillHome },
-    { text: "Galeria", array: null, linkTo: "/Gallery", icon: RiGalleryFill },
+    { text: "Galeria", array: null, linkTo: "/galeria", icon: RiGalleryFill },
     { text: "Kontakt", array: null, linkTo: "#contact", icon: AiFillPhone },
 ];
 
@@ -405,9 +399,7 @@ export const whyUsDetails = {
         },
     ],
     backgroundInfo: {
-        image: "/images/index/background-blue.webp",
-        positionMobile: "top;",
-        positionDesktop: "center;",
+        image: "true",
     },
     buttonInfo: {
         type: "anchor",

@@ -3,7 +3,7 @@ import Link from "next/link";
 const Button = ({ type, text, color, link }) => {
     return (
         <div
-            className={`rounded-md font-radio-canada ${
+            className={`rounded-md  ${
                 color === "babyBlue"
                     ? "text-babyBlue-1500"
                     : "text-royalPink-1500"
@@ -19,9 +19,16 @@ const Button = ({ type, text, color, link }) => {
                 <button type="submit" className="w-full text-center px-3 py-5">
                     {text}
                 </button>
+            ) : link.includes("#") ? (
+                <a className="block w-full text-center px-3 py-2" href={link}>
+                    {text}
+                </a>
             ) : (
-                <Link href={link} scroll={false}>
-                    <a className="block w-full text-center px-3 py-2">{text}</a>
+                <Link
+                    className="block w-full text-center px-3 py-2"
+                    href={link}
+                >
+                    {text}
                 </Link>
             )}
         </div>
