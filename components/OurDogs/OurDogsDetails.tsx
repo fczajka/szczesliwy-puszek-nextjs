@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Button from "../Ui/Button";
 import PhotoAndTextWrapper from "../Ui/PhotoAndTextWrapper";
-import { headlineFont } from "../../public/fonts";
+import { headlineFont } from "public/fonts";
+import { OurDogsDetailsProps } from "public/interfaces";
 
-const OurDogsDetails = ({ content }) => {
+const OurDogsDetails = ({ content }: OurDogsDetailsProps) => {
     return (
-        <PhotoAndTextWrapper bgInfo={false}>
+        <PhotoAndTextWrapper bgInfo={content.backgroundInfo}>
             <div className="w-full flex flex-col my-4 lg:w-9/12 lg:odd:flex-row-reverse lg:even:flex-row">
                 <div className="relative w-full lg:w-1/2 lg:m-4">
                     <Image
@@ -26,12 +27,10 @@ const OurDogsDetails = ({ content }) => {
                     <p className="text-sm leading-relaxed text-justify md:text-base lg:text-lg">
                         {content.text}
                     </p>
-                    {content.addText ? (
+                    {content.addText && (
                         <h4 className="text-base sm:text-lg">
                             {content.addText}
                         </h4>
-                    ) : (
-                        ""
                     )}
                     <ul className="leading-relaxed text-sm my-4 md:text-base lg:text-lg">
                         {content.params.map((param) => (

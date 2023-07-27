@@ -27,6 +27,7 @@ import Betsy from "./images/litter-a/Betsy.webp";
 import Boni from "./images/litter-a/Boni.webp";
 import Baki from "./images/litter-a/Baki.webp";
 import BascoBig from "./images/index/Basco-big.webp";
+import { ButtonTypes, Colors } from "./enums";
 
 export const metaData = {
     title: "Szczęśliwy Puszek",
@@ -35,22 +36,37 @@ export const metaData = {
 export const navbar = {
     title: "Szczęśliwy Puszek",
     menu: [
-        { text: "Strona główna", array: null, linkTo: "/", icon: null },
+        {
+            text: "Strona główna",
+            array: undefined,
+            linkTo: "/",
+            icon: undefined,
+        },
         {
             text: "Psy",
             array: [
-                { name: "Pola", color: "royalPink", linkTo: "/Pola" },
-                { name: "William", color: "babyBlue", linkTo: "/William" },
+                { name: "Pola", color: Colors.pink, linkTo: "/Pola" },
+                { name: "William", color: Colors.blue, linkTo: "/William" },
             ],
             icon: IoMdArrowDropdown,
         },
         {
             text: "Mioty",
-            array: [{ name: "Miot a", color: "babyBlue", linkTo: "/miot-a" }],
+            array: [{ name: "Miot a", color: Colors.blue, linkTo: "/miot-a" }],
             icon: IoMdArrowDropdown,
         },
-        { text: "Galeria", array: null, linkTo: "/galeria", icon: null },
-        { text: "Kontakt", array: null, linkTo: "#contact", icon: null },
+        {
+            text: "Galeria",
+            array: undefined,
+            linkTo: "/galeria",
+            icon: undefined,
+        },
+        {
+            text: "Kontakt",
+            array: undefined,
+            linkTo: "#contact",
+            icon: undefined,
+        },
     ],
 };
 
@@ -58,14 +74,14 @@ export const contact = {
     mail: {
         header: "Napisz do nas!",
         form: [
-            { label: "Imię:", name: "name", type: "text" },
+            { label: "Imię:", name: "senderName", type: "text" },
             { label: "E-mail:", name: "email", type: "text" },
             { label: "Wiadomość:", name: "message", type: null },
         ],
         buttonInfo: {
-            type: "submit",
+            type: ButtonTypes.submit,
             text: "Wyślij wiadomość!",
-            color: "royalPink",
+            color: Colors.pink,
             link: null,
         },
     },
@@ -89,16 +105,18 @@ export const slider = {
             headline: "Weź jednego ze sobą",
             subline: "I nie każ sobie dłużej czekać",
             anchorText: "Sprawdź",
-            anchorColor: "babyBlue",
+            anchorColor: Colors.blue,
             linkTo: "#whyUs",
+            alt: "Szczeniak Basko patrzy w lewą stronę",
         },
         {
             bgPhoto: WilliamPhoto,
             headline: "Mam na imię William",
             subline: "Jestem reproduktorem",
             anchorText: "Poczytaj o mnie!",
-            anchorColor: "babyBlue",
+            anchorColor: Colors.blue,
             linkTo: "/William",
+            alt: "Samiec William dumnie patrzy w lewą stronę",
         },
     ],
 };
@@ -152,9 +170,9 @@ export const ourDogs = {
             alt: "Samoyed Pola uśmiecha się w stronę kamery",
             text: "Suczka o bardzo pogodniej naturze, niezwykle cierpliwa i spokojna w kontakcie z ludźmi. Wysoce opiekuńcza w stosunku do swoich dzieci, naturalna przewodniczka. Nigdy nie przejawiała tendencji niszczycielskich, świetnie znosi podróże krótkie i długie.",
             buttonInfo: {
-                type: "anchor",
+                type: ButtonTypes.anchor,
                 text: "Poczytaj o mnie!",
-                color: "royalPink",
+                color: Colors.pink,
                 link: "/Pola",
             },
         },
@@ -164,15 +182,15 @@ export const ourDogs = {
             alt: "Samoyed William dumnie stoi, patrzy w lewą stronę",
             text: "Dumny samiec, od urodzenie posiada bardzo dostojny chód. Bardzo aktywny i przyjacielski, jest gotów do ciągłego ruchu. Przepiękna głowa o idealnych proporcjach otoczona bujną grzywą. Zgrabnej atletycznej postury. Naturalny model.",
             buttonInfo: {
-                type: "anchor",
+                type: ButtonTypes.anchor,
                 text: "Poczytaj o mnie!",
-                color: "babyBlue",
+                color: Colors.blue,
                 link: "/William",
             },
         },
     ],
     backgroundInfo: {
-        image: "true",
+        image: true,
     },
 };
 
@@ -204,10 +222,13 @@ export const Pola = {
         "Jr. Champion of Croatia",
     ],
     buttonInfo: {
-        type: "anchor",
+        type: ButtonTypes.anchor,
         text: "Strona głowna!",
-        color: "royalPink",
+        color: Colors.pink,
         link: "/",
+    },
+    backgroundInfo: {
+        image: false,
     },
 };
 
@@ -230,10 +251,13 @@ export const William = {
         { key: "Waga", value: "22kg" },
     ],
     buttonInfo: {
-        type: "anchor",
+        type: ButtonTypes.anchor,
         text: "Strona głowna!",
-        color: "babyBlue",
+        color: Colors.blue,
         link: "/",
+    },
+    backgroundInfo: {
+        image: false,
     },
 };
 
@@ -278,14 +302,14 @@ export const litterA = {
         ],
     },
     buttonInfo: {
-        type: "anchor",
+        type: ButtonTypes.anchor,
         text: "Strona główna",
-        color: "royalPink",
+        color: Colors.pink,
         link: "/",
     },
     buttonText: "Strona główna",
     backgroundInfo: {
-        image: "true",
+        image: true,
     },
 };
 
@@ -356,14 +380,14 @@ export const mobileNavbar = [
     {
         text: "Psy",
         array: [
-            { name: "Pola", color: "royalPink", linkTo: "/Pola" },
-            { name: "William", color: "babyBlue", linkTo: "/William" },
+            { name: "Pola", color: Colors.pink, linkTo: "/Pola" },
+            { name: "William", color: Colors.blue, linkTo: "/William" },
         ],
         icon: FaDog,
     },
     {
         text: "Mioty",
-        array: [{ name: "Miot a", color: "babyBlue", linkTo: "/miot-a" }],
+        array: [{ name: "Miot a", color: Colors.blue, linkTo: "/miot-a" }],
         icon: FaPaw,
     },
     { text: "Główna", array: null, linkTo: "/", icon: AiFillHome },
@@ -399,12 +423,12 @@ export const whyUsDetails = {
         },
     ],
     backgroundInfo: {
-        image: "true",
+        image: true,
     },
     buttonInfo: {
-        type: "anchor",
+        type: ButtonTypes.anchor,
         text: "Strona główna",
-        color: "royalPink",
+        color: Colors.pink,
         link: "/",
     },
 };

@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Button from "../Ui/Button";
+import { SlideProps } from "public/interfaces";
+import { ButtonTypes } from "public/enums";
 
-const Slide = ({ slider }) => {
-    const { bgPhoto, headline, subline, anchorText, anchorColor, linkTo } =
+function Slide({ slider }: SlideProps) {
+    const { bgPhoto, headline, subline, anchorText, anchorColor, linkTo, alt } =
         slider;
 
     return (
@@ -14,14 +16,14 @@ const Slide = ({ slider }) => {
                         : `[object-position:center]`
                 }`}
                 src={bgPhoto}
-                alt=""
+                alt={alt}
                 priority
             />
             <div className="absolute w-full text-babyBlue-1500 inline-flex flex-col items-center top-1/2 -translate-y-1/2 lg:left-16 lg:w-fit lg:text-babyBlue-0">
                 <h2 className="text-3xl sm:text-4xl">{headline}</h2>
                 <h3 className="text-lg my-2 mb-4 sm:text-xl">{subline}</h3>
                 <Button
-                    type="anchor"
+                    type={ButtonTypes.anchor}
                     text={anchorText}
                     color={anchorColor}
                     link={linkTo}
@@ -29,6 +31,6 @@ const Slide = ({ slider }) => {
             </div>
         </div>
     );
-};
+}
 
 export default Slide;

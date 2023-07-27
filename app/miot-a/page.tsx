@@ -2,8 +2,8 @@ import Image from "next/image";
 import PhotoAndText from "../../components/Ui/PhotoAndText";
 import PhotoAndTextWrapper from "../../components/Ui/PhotoAndTextWrapper";
 import Button from "../../components/Ui/Button";
-import { litterA as litter } from "../../public/content";
-import { headlineFont } from "../../public/fonts";
+import { litterA as litter } from "public/content";
+import { headlineFont } from "public/fonts";
 
 const LitterA = () => {
     return (

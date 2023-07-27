@@ -1,7 +1,7 @@
 import PhotoAndText from "../Ui/PhotoAndText";
 import PhotoAndTextWrapper from "../Ui/PhotoAndTextWrapper";
-import { headlineFont } from "../../public/fonts";
-import { ourDogs } from "../../public/content";
+import { headlineFont } from "public/fonts";
+import { ourDogs } from "public/content";
 
 const OurDogs = () => {
     return (

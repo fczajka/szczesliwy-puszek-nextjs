@@ -1,13 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { MutableRefObject } from "react";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { IconType } from "react-icons";
+import { SubmenuProps } from "public/interfaces";
 
-const Submenu = ({ submenu, mobile }) => {
-    const [isOpenSubmenu, setIsOpenSubmenu] = useState(false);
-    const refButton = useRef();
-    const refSubmenu = useRef();
+const Submenu = ({ submenu, mobile }: SubmenuProps) => {
+    const [isOpenSubmenu, setIsOpenSubmenu] = useState<boolean>(false);
+    const refButton: MutableRefObject<HTMLButtonElement | null> = useRef(null);
+    const refSubmenu: MutableRefObject<HTMLUListElement | null> = useRef(null);
 
     const onMouseEnterSubmenu = () => {
         window.innerWidth > 1024 && setIsOpenSubmenu(true);
@@ -18,12 +20,13 @@ const Submenu = ({ submenu, mobile }) => {
     };
 
     useEffect(() => {
-        const handler = (event) => {
+        const handler = (event: MouseEvent | TouchEvent) => {
             if (
                 isOpenSubmenu &&
                 refSubmenu.current &&
-                !refButton.current.contains(event.target) &&
-                !refSubmenu.current.contains(event.target)
+                refButton.current &&
+                !refButton.current.contains(event.target as Node) &&
+                !refSubmenu.current.contains(event.target as Node)
             ) {
                 setIsOpenSubmenu(false);
             }
@@ -62,26 +65,27 @@ const Submenu = ({ submenu, mobile }) => {
                 ${mobile ? "bottom-16" : ""}
                 ${isOpenSubmenu ? "block" : "hidden"}`}
             >
-                {submenu.array.map((submenuElement) => (
-                    <li
-                        key={submenuElement.name}
-                        className={
-                            submenuElement.color === "royalPink"
-                                ? "hover:bg-royalPink-100"
-                                : "hover:bg-babyBlue-100"
-                        }
-                    >
-                        <Link
-                            href={`${submenuElement.linkTo}`}
-                            className="py-0.5 px-4 block"
-                            onClick={() => {
-                                setIsOpenSubmenu(!isOpenSubmenu);
-                            }}
+                {submenu.array &&
+                    submenu.array.map((submenuElement) => (
+                        <li
+                            key={submenuElement.name}
+                            className={
+                                submenuElement.color === "royalPink"
+                                    ? "hover:bg-royalPink-100"
+                                    : "hover:bg-babyBlue-100"
+                            }
                         >
-                            {submenuElement.name}
-                        </Link>
-                    </li>
-                ))}
+                            <Link
+                                href={`${submenuElement.linkTo}`}
+                                className="py-0.5 px-4 block"
+                                onClick={() => {
+                                    setIsOpenSubmenu(!isOpenSubmenu);
+                                }}
+                            >
+                                {submenuElement.name}
+                            </Link>
+                        </li>
+                    ))}
             </ul>
         </>
     );

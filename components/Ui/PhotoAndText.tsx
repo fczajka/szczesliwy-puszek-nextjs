@@ -1,8 +1,15 @@
 import Image from "next/image";
 import Button from "./Button";
-import { headlineFont } from "../../public/fonts";
+import { headlineFont } from "public/fonts";
+import { PhotoAndTextProps } from "public/interfaces";
 
-const PhotoAndText = ({ headline, image, alt, text, buttonInfo }) => {
+const PhotoAndText = ({
+    headline,
+    image,
+    alt,
+    text,
+    buttonInfo,
+}: PhotoAndTextProps) => {
     return (
         <div className="w-full flex flex-col my-4 lg:w-9/12 lg:odd:flex-row-reverse lg:even:flex-row">
             <div className="relative w-full h-72 lg:w-1/2 lg:m-4 md:h-96 xl:h-104">
@@ -14,7 +21,7 @@ const PhotoAndText = ({ headline, image, alt, text, buttonInfo }) => {
                 >
                     {headline}
                 </h3>
-                <p className=" text-sm leading-relaxed text-justify my-4 md:text-base lg:text-lg">
+                <p className="text-sm leading-relaxed text-justify my-4 md:text-base lg:text-lg">
                     {text}
                 </p>
                 {buttonInfo && (

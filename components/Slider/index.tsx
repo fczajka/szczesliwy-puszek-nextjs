@@ -3,23 +3,30 @@
 import { useState, useEffect } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Slide from "./Slide";
-import { slider } from "../../public/content";
+import { slider } from "public/content";
+import {
+    outOfSlider,
+    sliderEnd,
+    sliderMiddle,
+    sliderStart,
+    timeToNextSlide,
+} from "public/constants";
 
 const Slider = () => {
-    const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(sliderStart);
 
     useEffect(() => {
-        if (index === 2) {
-            setIndex(0);
-        } else if (index == -1) {
-            setIndex(1);
+        if (index === sliderEnd) {
+            setIndex(sliderStart);
+        } else if (index == outOfSlider) {
+            setIndex(sliderMiddle);
         }
     }, [index]);
 
     useEffect(() => {
         const change = setTimeout(
-            () => setIndex(index !== 2 ? index + 1 : index === 3 ? 0 : ""),
-            12000
+            () => setIndex(index === sliderEnd ? sliderStart : index + 1),
+            timeToNextSlide
         );
         return () => clearTimeout(change);
     }, [index]);

@@ -3,12 +3,12 @@ import Navbar from "../components/Layout/Navbar";
 import MobileNavbar from "../components/Layout/MobileNavbar";
 import Contact from "../components/Layout/Contact";
 import Transition from "../components/Ui/Transition";
-import { defaultFont } from "../public/fonts";
+import { defaultFont } from "public/fonts";
+import { meta } from "public/constants";
 
 export const metadata = {
-    title: "Szczesliwy Puszek",
-    description:
-        "Adoptuj swojego wymarzonego pieska z hodowli, która dba o każdy aspekt rozwoju malucha!",
+    title: meta.title,
+    description: meta.description,
 };
 
 export default function RootLayout({ children }) {

@@ -2,23 +2,11 @@
 
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { animateIn, animateOut } from "public/constants";
+import { TransitionProps } from "public/interfaces";
 
-const Transition = ({ children }) => {
+const Transition = ({ children }: TransitionProps) => {
     const pathname = usePathname();
-
-    const animateIn = {
-        opacity: 1,
-        transition: {
-            duration: 0.3,
-        },
-    };
-
-    const animateOut = {
-        opacity: 0,
-        transition: {
-            duration: 0.3,
-        },
-    };
 
     return (
         <motion.div

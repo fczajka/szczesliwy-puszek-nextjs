@@ -1,6 +1,6 @@
 import WhyUsCards from "./WhyUsCards";
-import { headlineFont } from "../../public/fonts";
-import { whyUs } from "../../public/content";
+import { headlineFont } from "public/fonts";
+import { whyUs } from "public/content";
 
 const WhyUs = () => {
     return (

@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Button from "../Ui/Button";
-import { headlineFont } from "../../public/fonts";
+import { headlineFont } from "public/fonts";
+import { WhyUsCardsProps } from "public/interfaces";
+import { ButtonTypes, Colors } from "public/enums";
 
-const WhyUs = ({ photo, headline, text, buttonText }) => {
+const WhyUs = ({ photo, headline, text, buttonText }: WhyUsCardsProps) => {
     return (
         <div className="relative w-256 h-104 bg-babyBlue-100 rounded-md mt-12 transition-all shadow-md shadow-babyBlue-200 hover:scale-105">
             <div className="relative h-1/2">
@@ -20,9 +22,9 @@ const WhyUs = ({ photo, headline, text, buttonText }) => {
             </div>
             <div className="absolute bottom-4 left-4">
                 <Button
-                    type="anchor"
+                    type={ButtonTypes.anchor}
                     text={buttonText}
-                    color="royalPink"
+                    color={Colors.pink}
                     link="/dlaczego-my"
                 />
             </div>

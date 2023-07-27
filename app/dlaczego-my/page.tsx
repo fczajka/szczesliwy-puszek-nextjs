@@ -1,7 +1,7 @@
 import PhotoAndText from "../../components/Ui/PhotoAndText";
 import PhotoAndTextWrapper from "../../components/Ui/PhotoAndTextWrapper";
 import Button from "../../components/Ui/Button";
-import { whyUsDetails } from "../../public/content";
+import { whyUsDetails } from "public/content";
 
 const WhyUs = () => {
     return (

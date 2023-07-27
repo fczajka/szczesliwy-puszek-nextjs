@@ -1,68 +1,117 @@
 "use client";
 
-import React, { useRef } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import React, { MutableRefObject, useRef } from "react";
+import { ToastContainer, TypeOptions, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import * as EmailValidator from "email-validator";
 import emailjs from "@emailjs/browser";
 import Button from "../Ui/Button";
-import { contact } from "../../public/content";
-import { headlineFont } from "../../public/fonts";
+import { contact } from "public/content";
+import { headlineFont } from "public/fonts";
+import { FormValidationProps, FormValidationReturn } from "public/interfaces";
 
 const Contact = () => {
-    const form = useRef();
+    const form: MutableRefObject<HTMLFormElement | null> = useRef(null);
 
-    const contextClass = {
-        success: "bg-green-200",
-        error: "bg-royalPink-200",
-        default: "bg-babyBlue-300",
+    const validateForm = (
+        values: FormValidationProps
+    ): FormValidationReturn => {
+        let { name, message, mail } = values;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        name = name.trim();
+        message = message.trim();
+        mail = mail.trim();
+
+        if (!name) {
+            return {
+                status: "error",
+                message: "Brak danych w formularzu!",
+            };
+        }
+        if (!message) {
+            return {
+                status: "error",
+                message: "Brak danych w formularzu!",
+            };
+        }
+        if (!mail) {
+            return {
+                status: "error",
+                message: "Brak danych w formularzu!",
+            };
+        }
+        if (!emailPattern.test(mail)) {
+            return {
+                status: "error",
+                message: "Błedny adres mailowy!",
+            };
+        }
+
+        return {
+            status: "success",
+            message: "Wszystko poszło pomyślnie!",
+        };
     };
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        form.current.name.value = form.current.name.value.trim();
-        form.current.email.value = form.current.email.value.trim();
-        form.current.message.value = form.current.message.value.trim();
-
-        if (
-            !form.current.name.value &&
-            !form.current.email.value &&
-            !form.current.message.value
-        ) {
-            toast.error("Brak danych w formularzu!");
-        } else if (!form.current.name.value && !form.current.message.value) {
-            toast.error("Brak imienia i wiadomości!");
-        } else if (!form.current.name.value && !form.current.email.value) {
-            toast.error("Brak imienia i adresu mailowego!");
-        } else if (!form.current.email.value && !form.current.message.value) {
-            toast.error("Brak adresu mailowego i wiadomości!");
-        } else if (!form.current.name.value) {
-            toast.error("Brak imienia!");
-        } else if (!form.current.email.value) {
-            toast.error("Brak adresu mailowego!");
-        } else if (!form.current.message.value) {
-            toast.error("Brak wiadomości!");
-        } else if (EmailValidator.validate(form.current.email.value)) {
+    const sender = (
+        e: React.FormEvent<HTMLFormElement>,
+        form: HTMLFormElement | null
+    ) => {
+        if (form) {
+            if (!process.env.SERVICE_ID) {
+                toast.error("Coś poszło nie tak!");
+                return;
+            }
+            if (!process.env.TEMPLATE_ID) {
+                toast.error("Coś poszło nie tak!");
+                return;
+            }
+            if (!process.env.PUBLIC_KEY) {
+                toast.error("Coś poszło nie tak!");
+                return;
+            }
             const sendMail = emailjs
                 .sendForm(
                     process.env.SERVICE_ID,
                     process.env.TEMPLATE_ID,
-                    form.current,
+                    form,
                     process.env.PUBLIC_KEY
                 )
                 .then(() => {
-                    e.target.reset();
+                    (e.target as HTMLFormElement).reset();
                 });
-
             toast.promise(sendMail, {
                 pending: "Wysyłamy wiadomość!",
                 success: "Wiadomość wysłana pomyślnie!",
                 error: "Wiadomość nie zotała wysłana!",
             });
-        } else {
-            toast.error("Zły mail!");
         }
+    };
+
+    const sendMail = (
+        e: React.FormEvent<HTMLFormElement>,
+        form: HTMLFormElement | null
+    ) => {
+        if (form) {
+            const validatedForm = validateForm({
+                name: form.senderName.value,
+                mail: form.email.value,
+                message: form.message.value,
+            });
+            if (validatedForm) {
+                if (validatedForm.status === "success") {
+                    sender(e, form);
+                } else if (validatedForm.status === "error") {
+                    toast.error(validatedForm.message);
+                }
+            }
+        }
+    };
+
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        sendMail(e, form.current);
     };
     return (
         <div
@@ -101,8 +150,8 @@ const Contact = () => {
                                     className="resize-none rounded-md border-0"
                                     id={section.name}
                                     name={section.name}
-                                    rows="3"
-                                    cols="30"
+                                    rows={3}
+                                    cols={30}
                                     wrap="soft"
                                 ></textarea>
                             )}
@@ -127,7 +176,7 @@ const Contact = () => {
                                     key={poi.information}
                                     className="flex my-6 items-center"
                                 >
-                                    {poi.icon ? <poi.icon /> : ""}
+                                    {poi.icon && <poi.icon />}
                                     {poi.information}
                                 </li>
                             )
@@ -141,17 +190,8 @@ const Contact = () => {
                 newestOnTop={true}
                 closeButton={false}
                 position="bottom-center"
-                toastClassName={({ type }) =>
-                    contextClass[type || "default"] +
-                    ` p-5 mb-4 rounded-md ${
-                        type === "error"
-                            ? "text-royalPink-1500"
-                            : type === "success"
-                            ? "text-green-900"
-                            : "text-babyBlue-1500"
-                    } cursor-pointer last:mb-60px last:sm:mb-80px lg:last:mb-4`
-                }
-                bodyClassName={() => "flex "}
+                toastClassName="p-5 mb-4 rounded-md text-babyBlue-1500 bg-babyBlue-200 cursor-pointer last:mb-60px last:sm:mb-80px lg:last:mb-4"
+                bodyClassName={() => "flex"}
             />
         </div>
     );
