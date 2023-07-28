@@ -5,47 +5,36 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { IconType } from "react-icons";
 import { SubmenuProps } from "public/interfaces";
+import { Colors } from "public/enums";
+import {
+    handleMouseEnter,
+    handleMouseLeave,
+    handleMouseMovement,
+} from "public/helpers";
+import { MutableButtonRefNull, MutableUListRefNull } from "public/types";
 
 const Submenu = ({ submenu, mobile }: SubmenuProps) => {
     const [isOpenSubmenu, setIsOpenSubmenu] = useState<boolean>(false);
-    const refButton: MutableRefObject<HTMLButtonElement | null> = useRef(null);
-    const refSubmenu: MutableRefObject<HTMLUListElement | null> = useRef(null);
+    const refButton: MutableButtonRefNull = useRef(null);
+    const refSubmenu: MutableUListRefNull = useRef(null);
 
-    const onMouseEnterSubmenu = () => {
-        window.innerWidth > 1024 && setIsOpenSubmenu(true);
-    };
-
-    const onMouseLeaveSubmenu = () => {
-        window.innerWidth > 1024 && setIsOpenSubmenu(false);
-    };
+    const onMouseEnterSubmenu = handleMouseEnter(setIsOpenSubmenu);
+    const onMouseLeaveSubmenu = handleMouseLeave(setIsOpenSubmenu);
 
     useEffect(() => {
-        const handler = (event: MouseEvent | TouchEvent) => {
-            if (
-                isOpenSubmenu &&
-                refSubmenu.current &&
-                refButton.current &&
-                !refButton.current.contains(event.target as Node) &&
-                !refSubmenu.current.contains(event.target as Node)
-            ) {
-                setIsOpenSubmenu(false);
-            }
-        };
-        document.addEventListener("mousedown", handler);
-        document.addEventListener("touchstart", handler);
-        return () => {
-            document.removeEventListener("mousedown", handler);
-            document.removeEventListener("touchstart", handler);
-        };
+        return handleMouseMovement(
+            isOpenSubmenu,
+            setIsOpenSubmenu,
+            refButton,
+            refSubmenu
+        );
     }, [isOpenSubmenu]);
 
     return (
         <>
             <button
                 ref={refButton}
-                className={`flex items-center ${
-                    mobile ? " flex-col-reverse" : ""
-                }`}
+                className={`flex items-center ${mobile && " flex-col-reverse"}`}
                 aria-haspopup="menu"
                 aria-expanded={isOpenSubmenu ? "true" : "false"}
                 onClick={() => {
@@ -55,14 +44,14 @@ const Submenu = ({ submenu, mobile }: SubmenuProps) => {
                 onMouseLeave={onMouseLeaveSubmenu}
             >
                 {submenu.text}
-                {submenu.icon ? <submenu.icon /> : ""}
+                {submenu.icon && <submenu.icon />}
             </button>
             <ul
                 ref={refSubmenu}
                 onMouseEnter={onMouseEnterSubmenu}
                 onMouseLeave={onMouseLeaveSubmenu}
                 className={`absolute bg-babyBlue-0 pt-4 pb-4 z-10 rounded-md shadow-md
-                ${mobile ? "bottom-16" : ""}
+                ${mobile && "bottom-16"}
                 ${isOpenSubmenu ? "block" : "hidden"}`}
             >
                 {submenu.array &&
@@ -70,7 +59,7 @@ const Submenu = ({ submenu, mobile }: SubmenuProps) => {
                         <li
                             key={submenuElement.name}
                             className={
-                                submenuElement.color === "royalPink"
+                                submenuElement.color === Colors.pink
                                     ? "hover:bg-royalPink-100"
                                     : "hover:bg-babyBlue-100"
                             }

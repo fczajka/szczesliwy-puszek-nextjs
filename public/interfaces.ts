@@ -102,12 +102,23 @@ export interface OurDogsDetailsProps {
     };
 }
 
-export interface NavbarContent {
-    title: string;
+export interface FormProps {
+    formData: {
+        label: string;
+        name: string;
+        type?: string;
+    }[];
+}
+
+export interface MenuProps {
     menu: {
         text: string;
         array?: { name: string; color: Colors; linkTo: string }[];
         linkTo?: string;
         icon?: IconType;
     }[];
+}
+
+export interface NavbarContent extends MenuProps {
+    title: string;
 }

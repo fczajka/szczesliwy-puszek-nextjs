@@ -76,7 +76,7 @@ export const contact = {
         form: [
             { label: "Imię:", name: "senderName", type: "text" },
             { label: "E-mail:", name: "email", type: "text" },
-            { label: "Wiadomość:", name: "message", type: null },
+            { label: "Wiadomość:", name: "message", type: undefined },
         ],
         buttonInfo: {
             type: ButtonTypes.submit,

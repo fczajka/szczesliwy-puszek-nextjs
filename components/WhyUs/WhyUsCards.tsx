@@ -3,6 +3,7 @@ import Button from "../Ui/Button";
 import { headlineFont } from "public/fonts";
 import { WhyUsCardsProps } from "public/interfaces";
 import { ButtonTypes, Colors } from "public/enums";
+import { whyUsAltText } from "public/constants";
 
 const WhyUs = ({ photo, headline, text, buttonText }: WhyUsCardsProps) => {
     return (
@@ -11,7 +12,7 @@ const WhyUs = ({ photo, headline, text, buttonText }: WhyUsCardsProps) => {
                 <Image
                     className="object-cover h-full rounded-t-md"
                     src={photo}
-                    alt="Why us card - photo"
+                    alt={whyUsAltText}
                 />
             </div>
             <div className="p-4 text-babyBlue-1500">

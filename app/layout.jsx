@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className="scroll-smooth motion-reduce:scroll-auto">
+        <html lang="pl" className="scroll-smooth motion-reduce:scroll-auto">
             <head />
             <body>
                 <div

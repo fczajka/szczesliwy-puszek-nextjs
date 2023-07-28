@@ -15,7 +15,6 @@ const WhyUs = () => {
                     text={section.text}
                 />
             ))}
-
             <Button
                 type={whyUsDetails.buttonInfo.type}
                 text={whyUsDetails.buttonInfo.text}

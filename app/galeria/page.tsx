@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "../../components/Ui/Button";
 import { gallery } from "public/content";
 import { ButtonTypes, Colors } from "public/enums";
+import { homeLink, homeLinkText } from "public/constants";
 
 const Gallery = () => {
     return (
@@ -34,9 +35,9 @@ const Gallery = () => {
             <div className="flex justify-center pt-4 pb-10">
                 <Button
                     type={ButtonTypes.anchor}
-                    text={"Strona główna"}
+                    text={homeLinkText}
                     color={Colors.blue}
-                    link={"/"}
+                    link={homeLink}
                 />
             </div>
         </div>
