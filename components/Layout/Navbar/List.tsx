@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Submenu from "../../Ui/Submenu";
 import { MenuProps } from "public/interfaces";

@@ -1,5 +1,6 @@
+"use client";
+
 import Link from "next/link";
-import Submenu from "../../Ui/Submenu";
 import { navbar } from "public/content";
 import { headlineFont } from "public/fonts";
 import { NavbarContent } from "public/interfaces";
