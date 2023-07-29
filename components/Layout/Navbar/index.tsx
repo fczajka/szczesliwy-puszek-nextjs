@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { navbar } from "public/content";
-import { headlineFont } from "public/fonts";
-import { NavbarContent } from "public/interfaces";
+import { navbar } from "@/public/content";
+import { headlineFont } from "@/public/fonts";
+import { NavbarContent } from "@/public/interfaces";
 import List from "./List";
 
 const Navbar = () => {

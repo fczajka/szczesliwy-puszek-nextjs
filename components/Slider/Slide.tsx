@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "../Ui/Button";
-import { SlideProps } from "public/interfaces";
-import { ButtonTypes } from "public/enums";
+import { SlideProps } from "@/public/interfaces";
+import { ButtonTypes } from "@/public/enums";
 
 function Slide({ slider }: SlideProps) {
     const { bgPhoto, headline, subline, anchorText, anchorColor, linkTo, alt } =

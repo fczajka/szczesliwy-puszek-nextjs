@@ -2,8 +2,8 @@
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { contact } from "public/content";
-import { headlineFont } from "public/fonts";
+import { contact } from "@/public/content";
+import { headlineFont } from "@/public/fonts";
 import Form from "./Form";
 
 const Contact = () => {

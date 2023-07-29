@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { animateIn, animateOut } from "public/constants";
-import { TransitionProps } from "public/interfaces";
+import { animateIn, animateOut } from "@/public/constants";
+import { TransitionProps } from "@/public/interfaces";
 
 const Transition = ({ children }: TransitionProps) => {
     const pathname = usePathname();

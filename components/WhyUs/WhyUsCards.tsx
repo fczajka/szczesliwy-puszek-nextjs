@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Button from "../Ui/Button";
-import { headlineFont } from "public/fonts";
-import { WhyUsCardsProps } from "public/interfaces";
-import { ButtonTypes, Colors } from "public/enums";
-import { whyUsAltText } from "public/constants";
+import Button from "@/components/Ui/Button";
+import { headlineFont } from "@/public/fonts";
+import { WhyUsCardsProps } from "@/public/interfaces";
+import { ButtonTypes, Colors } from "@/public/enums";
+import { whyUsAltText } from "@/public/constants";
 
 const WhyUs = ({ photo, headline, text, buttonText }: WhyUsCardsProps) => {
     return (

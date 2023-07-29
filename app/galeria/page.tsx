@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Button from "../../components/Ui/Button";
-import { gallery } from "public/content";
-import { ButtonTypes, Colors } from "public/enums";
-import { homeLink, homeLinkText } from "public/constants";
+import { gallery } from "@/public/content";
+import { ButtonTypes, Colors } from "@/public/enums";
+import { homeLink, homeLinkText } from "@/public/constants";
+import Button from "@/components/Ui/Button";
 
 const Gallery = () => {
     return (

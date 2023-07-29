@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Slide from "./Slide";
-import { slider } from "public/content";
+import { slider } from "@/public/content";
 import {
     outOfSlider,
     sliderEnd,

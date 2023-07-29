@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Submenu from "../Ui/Submenu";
-import { mobileNavbar } from "public/content";
+import { mobileNavbar } from "@/public/content";
 
 const MobileNavbar = () => {
     return (

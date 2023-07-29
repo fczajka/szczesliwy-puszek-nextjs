@@ -1,17 +1,18 @@
 import "./globals.css";
-import Navbar from "../components/Layout/Navbar";
-import MobileNavbar from "../components/Layout/MobileNavbar";
-import Contact from "../components/Layout/Contact";
-import Transition from "../components/Ui/Transition";
-import { defaultFont } from "public/fonts";
-import { meta } from "public/constants";
+import { defaultFont } from "@/public/fonts";
+import { meta } from "@/public/constants";
+import Navbar from "@/components/Layout/Navbar";
+import Transition from "@/components/Ui/Transition";
+import Contact from "@/components/Layout/Contact";
+import MobileNavbar from "@/components/Layout/MobileNavbar";
+import { LayoutChirldren } from "@/public/interfaces";
 
 export const metadata = {
     title: meta.title,
     description: meta.description,
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: LayoutChirldren) {
     return (
         <html lang="pl" className="scroll-smooth motion-reduce:scroll-auto">
             <head />

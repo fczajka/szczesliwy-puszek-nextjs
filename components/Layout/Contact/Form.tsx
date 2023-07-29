@@ -2,10 +2,10 @@
 
 import React, { MutableRefObject, useRef } from "react";
 import "react-toastify/dist/ReactToastify.css";
-import Button from "../../Ui/Button";
-import { contact } from "public/content";
-import { sendMail } from "public/helpers";
-import { FormProps } from "public/interfaces";
+import { contact } from "@/public/content";
+import { sendMail } from "@/public/helpers";
+import { FormProps } from "@/public/interfaces";
+import Button from "@/components/Ui/Button";
 
 const Form = ({ formData }: FormProps) => {
     const form: MutableRefObject<HTMLFormElement | null> = useRef(null);

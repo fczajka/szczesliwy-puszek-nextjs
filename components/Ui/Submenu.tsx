@@ -1,11 +1,9 @@
 "use client";
 
-import React, { MutableRefObject } from "react";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { IconType } from "react-icons";
-import { SubmenuProps } from "public/interfaces";
-import { Colors } from "public/enums";
+import { SubmenuProps } from "@/public/interfaces";
+import { Colors } from "@/public/enums";
 import {
     handleMouseEnter,
     handleMouseLeave,

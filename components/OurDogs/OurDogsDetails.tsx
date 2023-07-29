@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Button from "../Ui/Button";
+import { headlineFont } from "@/public/fonts";
+import { OurDogsDetailsProps } from "@/public/interfaces";
 import PhotoAndTextWrapper from "../Ui/PhotoAndTextWrapper";
-import { headlineFont } from "public/fonts";
-import { OurDogsDetailsProps } from "public/interfaces";
+import Button from "../Ui/Button";
 
 const OurDogsDetails = ({ content }: OurDogsDetailsProps) => {
     return (

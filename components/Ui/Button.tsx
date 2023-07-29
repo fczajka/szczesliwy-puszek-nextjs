@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ButtonTypes, Colors } from "public/enums";
-import { ButtonProps } from "public/interfaces";
+import { ButtonTypes, Colors } from "@/public/enums";
+import { ButtonProps } from "@/public/interfaces";
 
 const Button = ({ type, text, color, link }: ButtonProps) => {
     return (

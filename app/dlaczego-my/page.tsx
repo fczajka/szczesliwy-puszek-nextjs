@@ -1,6 +1,6 @@
-import PhotoAndText from "../../components/Ui/PhotoAndText";
-import PhotoAndTextWrapper from "../../components/Ui/PhotoAndTextWrapper";
-import Button from "../../components/Ui/Button";
+import Button from "@/components/Ui/Button";
+import PhotoAndText from "@/components/Ui/PhotoAndText";
+import PhotoAndTextWrapper from "@/components/Ui/PhotoAndTextWrapper";
 import { whyUsDetails } from "public/content";
 
 const WhyUs = () => {

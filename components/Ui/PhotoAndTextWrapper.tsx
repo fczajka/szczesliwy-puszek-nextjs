@@ -1,4 +1,4 @@
-import { PhotoAndTextWrapperProps } from "public/interfaces";
+import { PhotoAndTextWrapperProps } from "@/public/interfaces";
 
 const PhotoAndTextWrapper = ({
     children,

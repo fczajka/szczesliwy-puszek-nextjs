@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "./Button";
-import { headlineFont } from "public/fonts";
-import { PhotoAndTextProps } from "public/interfaces";
+import { headlineFont } from "@/public/fonts";
+import { PhotoAndTextProps } from "@/public/interfaces";
 
 const PhotoAndText = ({
     headline,

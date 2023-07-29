@@ -1,5 +1,5 @@
+import Submenu from "@/components/Ui/Submenu";
 import Link from "next/link";
-import Submenu from "../../Ui/Submenu";
 import { MenuProps } from "public/interfaces";
 
 const Navbar = ({ menu }: MenuProps) => {
