@@ -7,10 +7,10 @@ import { whyUsAltText } from "@/public/constants";
 
 const WhyUs = ({ photo, headline, text, buttonText }: WhyUsCardsProps) => {
     return (
-        <div className="relative w-256 h-104 bg-babyBlue-100 rounded-md mt-12 transition-all shadow-md shadow-babyBlue-200 hover:scale-105">
+        <div className="relative w-256 h-104 bg-babyBlue-100 rounded-secondary mt-12 transition-all hover:scale-105 motion-reduce:transition-none">
             <div className="relative h-1/2">
                 <Image
-                    className="object-cover h-full rounded-t-md"
+                    className="object-cover h-full rounded-t-secondary"
                     src={photo}
                     alt={whyUsAltText}
                 />

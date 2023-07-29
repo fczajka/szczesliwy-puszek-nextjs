@@ -3,6 +3,7 @@ import { FaDog, FaPaw } from "react-icons/fa";
 import { AiFillHome, AiFillPhone } from "react-icons/ai";
 import { RiGalleryFill } from "react-icons/ri";
 import { MdLocationPin, MdMail } from "react-icons/md";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import gallery1 from "./images/gallery/gallery1.webp";
 import gallery2 from "./images/gallery/gallery2.webp";
@@ -432,3 +433,8 @@ export const whyUsDetails = {
         link: "/",
     },
 };
+
+export const sliderControls = [
+    { icon: IoIosArrowBack, aria: "Wstecz" },
+    { icon: IoIosArrowForward, aria: "naprzód" },
+];

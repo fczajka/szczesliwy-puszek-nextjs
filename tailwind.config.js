@@ -10,6 +10,13 @@ module.exports = {
             backgroundImage: {
                 "why-us": "url('../public/images/index/background-pink.webp')",
             },
+            borderRadius: {
+                primary: "0.75rem",
+                secondary: "1.5rem",
+            },
+            boxShadow: {
+                custom: "0px 2px 6px 0px rgba(148, 163, 184, 1);",
+            },
             maxWidth: {
                 1920: "1920px",
                 "50%": "50%",

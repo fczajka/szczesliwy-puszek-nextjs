@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 import { IconType } from "react-icons";
 import { ButtonTypes, Colors } from "./enums";
+import { SetStateActionNumber } from "./types";
 
 export interface FormValidationProps {
     name: string;
@@ -121,4 +122,13 @@ export interface MenuProps {
 
 export interface NavbarContent extends MenuProps {
     title: string;
+}
+
+export interface LayoutChirldren {
+    children: ReactNode;
+}
+
+export interface ControlsProps {
+    setIndex: SetStateActionNumber;
+    index: number;
 }

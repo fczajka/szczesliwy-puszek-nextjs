@@ -21,7 +21,7 @@ const Gallery = () => {
                                         className="relative h-96 lg:h-72 xl:h-96 my-4 first:my-2 last:my-2"
                                     >
                                         <Image
-                                            className="object-cover w-full h-full"
+                                            className="object-cover w-full h-full rounded-secondary"
                                             src={photo.src}
                                             alt={photo.alt}
                                         />
@@ -32,7 +32,7 @@ const Gallery = () => {
                     </div>
                 ))}
             </div>
-            <div className="flex justify-center pt-4 pb-10">
+            <div className="flex justify-center pt-8 pb-10">
                 <Button
                     type={ButtonTypes.anchor}
                     text={homeLinkText}

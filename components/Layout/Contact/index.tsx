@@ -42,9 +42,9 @@ const Contact = () => {
                 autoClose={1800}
                 hideProgressBar={true}
                 newestOnTop={true}
-                closeButton={false}
+                closeButton={true}
                 position="bottom-center"
-                toastClassName="p-5 mb-4 rounded-md text-babyBlue-1500 bg-babyBlue-200 cursor-pointer last:mb-60px last:sm:mb-80px lg:last:mb-4"
+                toastClassName="p-5 mb-4 rounded-primary text-babyBlue-1500 bg-babyBlue-200 cursor-pointer last:mb-60px last:sm:mb-80px lg:last:mb-4"
                 bodyClassName={() => "flex"}
             />
         </div>

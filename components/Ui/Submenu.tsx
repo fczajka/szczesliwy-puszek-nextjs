@@ -48,7 +48,7 @@ const Submenu = ({ submenu, mobile }: SubmenuProps) => {
                 ref={refSubmenu}
                 onMouseEnter={onMouseEnterSubmenu}
                 onMouseLeave={onMouseLeaveSubmenu}
-                className={`absolute bg-babyBlue-0 pt-4 pb-4 z-10 rounded-md shadow-md
+                className={`absolute bg-babyBlue-0 py-4 z-10 rounded-primary shadow-custom
                 ${mobile && "bottom-16"}
                 ${isOpenSubmenu ? "block" : "hidden"}`}
             >

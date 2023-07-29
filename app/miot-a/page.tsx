@@ -48,12 +48,14 @@ const LitterA = () => {
                     ))}
                 </div>
             </div>
-            <Button
-                type={litter.buttonInfo.type}
-                text={litter.buttonInfo.text}
-                color={litter.buttonInfo.color}
-                link={litter.buttonInfo.link}
-            />
+            <div className="mt-4">
+                <Button
+                    type={litter.buttonInfo.type}
+                    text={litter.buttonInfo.text}
+                    color={litter.buttonInfo.color}
+                    link={litter.buttonInfo.link}
+                />
+            </div>
         </PhotoAndTextWrapper>
     );
 };

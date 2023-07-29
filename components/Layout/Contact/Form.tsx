@@ -34,11 +34,11 @@ const Form = ({ formData }: FormProps) => {
                             type={section.type}
                             id={section.name}
                             name={section.name}
-                            className="rounded-md border-0"
+                            className="rounded-primary border-0"
                         />
                     ) : (
                         <textarea
-                            className="resize-none rounded-md border-0"
+                            className="resize-none rounded-primary border-0"
                             id={section.name}
                             name={section.name}
                             rows={3}
