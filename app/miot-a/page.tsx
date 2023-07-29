@@ -39,7 +39,7 @@ const LitterA = () => {
                             </h4>
                             <div className="relative w-full h-72 md:h-96 xl:h-104">
                                 <Image
-                                    className="object-cover h-full"
+                                    className="object-cover h-full rounded-secondary"
                                     src={dog.photo}
                                     alt={dog.alt}
                                 />
