@@ -6,7 +6,7 @@ import { mobileNavbar } from "@/public/content";
 
 const MobileNavbar = () => {
     return (
-        <div className="fixed bottom-0 w-full h-60px bg-babyBlue-0 sm:h-80px lg:hidden">
+        <div className="fixed text-sm bottom-0 w-full h-60px bg-babyBlue-0 sm:h-80px sm:text-base lg:hidden">
             <ul className="flex basis-full h-full justify-evenly items-center ">
                 {mobileNavbar.map((listElement) => (
                     <li

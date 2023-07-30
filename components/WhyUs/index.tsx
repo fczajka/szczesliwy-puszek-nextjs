@@ -13,11 +13,11 @@ const WhyUs = () => {
             >
                 {whyUs.title}
             </h2>
-            <div className="w-full flex items-center flex-col xl:flex-row xl:justify-evenly">
+            <div className="w-full flex flex-col xl:flex-row">
                 {whyUs.cards.map((column) => (
                     <div
                         key={column.side}
-                        className="md:w-full md:flex md:flex-row md:justify-evenly xl:justify-around"
+                        className="md:w-full md:flex px-4 sm:px-32 md:px-0 md:justify-around"
                     >
                         {column.columns.map((card) => (
                             <WhyUsCards
