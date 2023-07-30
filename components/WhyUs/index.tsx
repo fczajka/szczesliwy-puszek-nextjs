@@ -9,7 +9,7 @@ const WhyUs = () => {
             className="w-full flex flex-col items-center bg-why-us bg-no-repeat md:px-20 2xl:px-28"
         >
             <h2
-                className={`my-16 mb-4 font-headline ${headlineFont.variable} text-royalPink-1500 text-3xl sm:text-4xl`}
+                className={`my-8 mb-0 font-headline ${headlineFont.variable} text-royalPink-1500 text-3xl sm:text-4xl lg:my-16 lg:mb-4`}
             >
                 {whyUs.title}
             </h2>

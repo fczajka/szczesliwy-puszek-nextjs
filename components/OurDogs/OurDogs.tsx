@@ -7,7 +7,7 @@ const OurDogs = () => {
     return (
         <PhotoAndTextWrapper bgInfo={ourDogs.backgroundInfo}>
             <h2
-                className={`my-16 font-headline ${headlineFont.variable} text-babyBlue-1500 text-3xl sm:text-4xl`}
+                className={`my-8 font-headline ${headlineFont.variable} text-babyBlue-1500 text-3xl sm:text-4xl lg:my-16`}
             >
                 {ourDogs.title}
             </h2>
